@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import classes from './Navbar.module.css'
-import logo from '../assets/Beast-mode-dark-logo.png'
+import logo from '../assets/Beast-mode-light-logo.png'
 import { NavLink } from 'react-router'
 import { LuSquareMenu } from "react-icons/lu"
 

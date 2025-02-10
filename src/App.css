@@ -16,7 +16,7 @@
 body{
     font-size: 1.1rem;
     font-family: "Poppins", serif;
-    background-color: var(--mid-black-color);
+    background-color: var(--dark-black-color);
 }
 a{
     text-decoration: none;

@@ -1,6 +1,53 @@
 .box-container{
-    background-image: url(../../assets/gym-background.jpg);
+    background-image: linear-gradient(to right bottom, #111111af, #d11a23af),url(../../assets/gym-background.jpg);
     background-size: cover;
     background-position: top;
     height: 90vh;
+    position: relative;
+}
+.text-box{
+    background-color: rgba(0, 0, 0, 0.441);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+.primary-header{
+    line-height: 1.7;
+}
+.primary-header span{
+    display: block;
+}
+.primary-header span:first-child{
+    font-size: 1.5rem;
+    letter-spacing: .4rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.primary-header span:nth-child(2){
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 1.3rem;
+}
+.primary-header span:last-child{
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.linkContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.2rem;
+}
+.linkBtn{
+    display: block;
+    width: 50%;
+    padding: 1rem;
+    background-color: var(--light-red-color);
+    color: white;
 }
