@@ -1,0 +1,6 @@
+.box-container{
+    background-image: url(../../assets/gym-background.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 90vh;
+}
