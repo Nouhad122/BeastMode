@@ -27,6 +27,7 @@
     letter-spacing: .2rem;
     font-weight: 300;
     text-transform: capitalize;
+    animation: opacityChanging 1s ease-out;
 }
 .primary-header span:nth-child(2){
     text-transform: uppercase;
@@ -34,11 +35,13 @@
     font-weight: 600;
     letter-spacing: .4rem;
     margin: .8rem 0;
+    animation: moveToRight 1s ease-out;
 }
 .primary-header span:last-child{
     font-size: .9rem;
     font-weight: 300;
     text-transform: capitalize;
+    animation: moveToLeft 1s ease-out;
 }
 .linkContainer{
     display: flex;
@@ -53,6 +56,7 @@
     padding: .4rem;
     background-color: var(--light-red-color);
     color: white;
+    animation: opacityChanging 1s ease-out;
 }
 
 @media screen and (min-width: 565px) {
@@ -92,5 +96,45 @@
     .linkBtn{
         width: 50%;
         font-size: 1.1rem;
+    }
+}
+
+@keyframes moveToRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    80%{
+        transform: translateX(20px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    80%{
+        transform: translateX(-20px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes opacityChanging {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
     }
 }
