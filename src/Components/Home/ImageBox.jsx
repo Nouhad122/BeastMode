@@ -11,10 +11,7 @@ const ImageBox = () => {
             <span>sweet, smile and repeat</span>
             <span>checkout the most effective exercises personalized to you</span>
         </h1>
-        <div className={classes.linkContainer}>
-            <Link className={classes.linkBtn}>Explore Exercises</Link>
-        </div>
-        
+            <Link className={`${classes['btn']} ${classes['btn-red']} ${classes['btn-animation']}`}>Explore Exercises</Link>
       </div>
     </section>
   )

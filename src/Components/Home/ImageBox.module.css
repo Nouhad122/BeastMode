@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: top;
     height: 90vh;
-    position: relative;
+    z-index: 1;
 }
 .text-box{
     background-color: rgba(0, 0, 0, 0.441);
@@ -13,11 +13,12 @@
     transform: translate(-50%, -50%);
     padding: 2rem .9rem;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 .primary-header{
     line-height: 1.7;
     min-width: 250px;
+    margin-bottom: 1.5rem;
 }
 .primary-header span{
     display: block;
@@ -43,20 +44,38 @@
     text-transform: capitalize;
     animation: moveToLeft 1s ease-out;
 }
-.linkContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1.6rem;
-}
-.linkBtn{
-    display: block;
+.btn:link,
+.btn:visited{
+    display: inline-block;
     font-size: .9rem;
-    width: 80%;
-    padding: .4rem;
+    padding: .4rem 2.2rem;
+    position: relative;
+    z-index: 1;
+    transition: all .6s;
+}
+.btn-red{
     background-color: var(--light-red-color);
-    color: white;
-    animation: opacityChanging 1s ease-out;
+    color: #fff;
+}
+.btn-red:hover{
+    color: var(--light-red-color);
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .6s;
+}
+.btn-red::after{
+    background-color: #fff;
+}
+.btn:hover::after{
+    width: 100%;
 }
 
 @media screen and (min-width: 565px) {
@@ -76,13 +95,17 @@
     .primary-header span:last-child{
         font-size: 1rem;
     }
-    .linkBtn{
-        padding: .7rem;
+    .btn:link,
+    .btn:visited{
+        padding: .6rem 4rem;
         font-size: 1.1rem;
     }
 }
 
 @media screen and (min-width: 815px){
+    .primary-header{
+        min-width: 500px;
+    }
     .primary-header span:first-child{
         font-size: 1.3rem;
         letter-spacing: .2rem;
@@ -93,8 +116,10 @@
     .primary-header span:last-child{
         font-size: 1.1rem;
     }
-    .linkBtn{
-        width: 50%;
+    
+    .btn:link,
+    .btn:visited{
+        padding: .6rem 8rem;
         font-size: 1.1rem;
     }
 }

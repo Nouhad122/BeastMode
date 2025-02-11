@@ -17,12 +17,14 @@
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 900;
 }
 .menu-bars{
     font-size: 2rem;
     cursor: pointer;
     position: relative;
     z-index: 901;
+    color: #fff;
 }
 .menu-list{
     position: absolute;
@@ -32,7 +34,6 @@
     min-height: 100vh;
     background-color: var(--light-black-color);
     list-style: none;
-    z-index: 900;
     transition: top .4s ease;
 }
 .opened-list{

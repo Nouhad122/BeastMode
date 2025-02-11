@@ -1,0 +1,27 @@
+/* search container */
+.exercises-search{
+    background-color: red;
+    text-align: center;
+    padding: 3rem 0;
+}
+.exercises-search h1{
+    font-size: 1.5rem;
+}
+.search-input{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+.search-input input{
+    padding: .7rem .5rem;
+    width: 60%;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+.search-input button{
+    padding: .7rem 1rem;
+    font-size: .9rem;
+    background-color: yellow;
+    border: none;
+}
