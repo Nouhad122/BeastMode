@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import classes from './Navbar.module.css'
-import logo from '../assets/Beast-mode-light-logo.png'
+import logo from '../../assets/Beast-mode-light-logo.png'
 import { NavLink } from 'react-router'
 import { LuSquareMenu } from "react-icons/lu"
 
@@ -34,6 +34,24 @@ const Navbar = () => {
                 className={({isActive}) =>
                 isActive ? classes.active : ''}>
                 Exercises
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink
+                to={`/`} 
+                className={({isActive}) =>
+                isActive ? classes.active : ''}>
+                Favorites
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink
+                to={`/`} 
+                className={({isActive}) =>
+                isActive ? classes.active : ''}>
+                Macros Calculator
                 </NavLink>
             </li>
         </ul>

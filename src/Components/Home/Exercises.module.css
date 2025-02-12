@@ -1,4 +1,3 @@
-/* search container */
 .exercises-search{
     text-align: center;
 }
@@ -23,102 +22,27 @@
 .search-input input:focus{
     border: solid 2px var(--light-red-color);
 }
-.btn{
-    padding: .7rem 1rem;
-    font-size: .9rem;
-    border: solid 2px transparent;
-    cursor: pointer;
-    background-color: var(--light-red-color);
-    color: var(--white-font-color);
-    transition: .3s ease;
-}
-.btn:hover{
-    background-color: transparent;
-    border: solid 2px var(--light-red-color);
-    color: var(--light-red-color);
-}
-
-/* exercises list */
 .exercises-list{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2.2rem 1rem;
 }
-.exercise-card{
-    background-color: var(--light-black-color);
-    margin-top: 2rem;
-    padding: 1rem;
-    width: 280px;
-    height: 480px;
-    position: relative;
-}
-.exercise-card img{
-    width: 100%;
-    object-fit: contain;
-}
-.sub-headings{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-.sub-headings span{
-    font-size: .9rem;
-    font-weight: 400;
-    padding: .2rem 1rem;
-    background-color: purple;
-    border-radius: 4rem;
-}
-.sub-headings span:last-child{
-    background-color: orange !important;
-}
-.exercise-name{
-    text-align: start;
-    margin-top: 1rem;
-    font-weight: 600;
-    font-size: 1.3rem;
-    text-transform: capitalize;
-}
-.exercise-equipment{
-    font-size: 1rem;
-    margin-top: .8rem;
-    font-weight: 700;
-}
-.exercise-equipment span{
-    font-weight: 400;
-    margin-left: .3rem;
-}
-.card-btn{
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
 
 @media screen and (min-width: 550px){
-    /* search container */
-    .search-input .btn{
+     .search-btn{
         padding: .7rem 1.8rem;
         font-size: 1rem;
     }
-    /* exercises list */
-    .exercise-card{
-        width: 360px;
-        height: 580px;
-    }
-    
 }
 
 @media screen and (min-width: 815px){
      /* exercises list */
      .exercises-list{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        gap: 1.1rem;
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+        gap: 1rem;
         place-items: center;
-    }
-    .exercise-card{
-        width: auto;
-        height: 570px;
     }
     
     /* search container */
@@ -128,8 +52,8 @@
     .exercises-search h1{
         font-size: 2rem;
     }
-    .search-input .btn{
-        padding: .7rem 2.2rem;
-        font-size: 1.1rem;
+    .search-btn{
+        padding: .9rem 2.4rem !important;
+        font-size: 1.1rem !important;
     }
 }

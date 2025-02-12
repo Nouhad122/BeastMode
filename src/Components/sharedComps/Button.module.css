@@ -1,0 +1,14 @@
+.btn{
+    padding: .7rem 1rem;
+    font-size: .9rem;
+    border: solid 2px var(--light-red-color);
+    cursor: pointer;
+    background-color: var(--light-red-color);
+    color: var(--white-font-color);
+    transition: .3s ease;
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--light-red-color);
+}
+

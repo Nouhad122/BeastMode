@@ -7,6 +7,9 @@
     --mid-black-color: #181818;
     --light-black-color: #2c2c2c;
     --white-font-color: #edebeb;
+    --red-font-color: rgb(239, 29, 29);
+    --purple-color: rgb(104, 6, 104);
+    --orange-color: rgb(225, 147, 0);
 }
 
 *{

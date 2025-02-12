@@ -6,9 +6,7 @@ const Home = () => {
   return (
     <>
       <ImageBox />
-      <section>
-        <Exercises />
-      </section>
+      <Exercises />
     </>
   )
 }

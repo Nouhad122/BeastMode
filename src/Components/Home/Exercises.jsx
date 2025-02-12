@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react'
 import classes from './Exercises.module.css'
 import { useQuery } from '@tanstack/react-query';
 import { exercisesOptions, fetchExercises } from '../../util/http';
+import ExerciseCard from './ExerciseCard';
+import Button from '../sharedComps/Button';
 
 const Exercises = () => {
     const searchElement = useRef();  
@@ -36,12 +38,12 @@ const Exercises = () => {
     }
 
   return (
-    <>
+    <section>
       <div className={classes['exercises-search']}>
         <h1 className={classes['header']}>Search For Exercises</h1>
         <form onSubmit={handleSearchResults} className={classes['search-input']}>
           <input type='text' id='text' name='text' ref={searchElement} />
-          <button className={classes['btn']}>Search</button>
+          <Button type='submit' className={classes['search-btn']}>Search</Button>
         </form>
       </div>
 
@@ -51,20 +53,11 @@ const Exercises = () => {
         {isError && <p>{error.message || "Something Went Wrong!"}</p>}
         {
           !isFetching && !isError && searchedExercises && searchedExercises.map(exercise =>(
-            <div className={classes['exercise-card']} key={exercise.id}>
-              <img src={exercise.gifUrl} alt={exercise.name}/>
-              <h5 className={classes['sub-headings']}>
-                <span>{exercise.bodyPart}</span>
-                <span>{exercise.target}</span>
-              </h5>
-              <h3 className={`${classes['exercise-name']} ${classes['header']}`}>{exercise.name}</h3>
-              <p className={classes['exercise-equipment']}>Equipment: <span>{exercise.equipment}</span></p>
-              <button className={`${classes['btn']} ${classes['card-btn']}`}>Add To Favorite</button>
-            </div>
+            <ExerciseCard {...exercise}/>
           ))
         } 
       </div>
-    </>
+    </section>
   )
 }
 
