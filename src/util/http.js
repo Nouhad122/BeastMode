@@ -7,12 +7,17 @@ export const exercisesOptions = {
 }
 
 
-export const fetchData = async (url, options) =>{
-    const response = await fetch(url, options);
-    if(!response.ok){
-        throw new Response(JSON.stringify('Failed to fetch data'), {status: 500})
+export const fetchExercises = async ({ url, options, signal }) =>{
+    try{
+        const response = await fetch(url, {...options, signal });
+        if(!response.ok){
+            throw new Error('An error occurred while fetching the exercises');
+        }
+        const data = await response.json();
+        return data;
     }
-    const data = await response.json();
-
-    return data;
+    
+    catch(error){
+        throw error;
+    }
 }

@@ -1,75 +1,68 @@
-import React, { useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import classes from './Exercises.module.css'
-import { useLoaderData } from 'react-router';
+import { useQuery } from '@tanstack/react-query';
+import { exercisesOptions, fetchExercises } from '../../util/http';
 
-const Exercises = () => {  
-    // const exercises = useLoaderData();
-    const [searchTerms, setSearchTerms] = useState('');  
-    // const [searchedExercises, setSearchedExersices] = useState([]);
-    // const [loading, setLoading] = useState(true);
-
-    // useEffect(() =>{
-    //   if(searchedExercises){
-    //     setTimeout(() => setLoading(false), 1000);
-    //   }
-    // },[searchedExercises]);
-
-    const handleInputChange = (event) =>{
-      setSearchTerms(event.target.value);
-    }
+const Exercises = () => {
+    const searchElement = useRef();  
+    const [searchTerm, setSearchTerm] = useState(null);
     
-    // const handleSearchResults = () =>{
-    //   if(searchTerms.trim() !== ''){
-    //     const filteredExercises = exercises.filter(exercise => JSON.stringify(exercise).includes(searchTerms.toLowerCase()));
-    //     setSearchedExersices(filteredExercises)
-    //   } 
-    // }
+    const { data: exercises, isFetching, isError, error, refetch} = useQuery({
+      queryKey: ['exercises'],
+      queryFn: ({ signal }) => fetchExercises(
+        { 
+          url: 'https://exercisedb.p.rapidapi.com/exercises?limit=100&offset=0',
+          options: exercisesOptions,
+          signal
+         }),
+      enabled: searchTerm !== undefined,
+      staleTime: 1000 * 60 * 60
+    });
 
-    // if(loading){
-    //   return <p>Fetching exercises...</p>
-    // }
+    const searchedExercises = exercises && exercises.filter(
+      exercise =>
+      exercise.name.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+      exercise.bodyPart.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+      exercise.equipment.toLowerCase().includes(searchTerm?.toLowerCase())||
+      exercise.target.toLowerCase().includes(searchTerm?.toLowerCase())
+    )
+    
+    const handleSearchResults = (event) =>{
+      event.preventDefault();
+      if(searchElement.current.value.trim() !== ''){
+        setSearchTerm(searchElement.current.value);
+        refetch();
+      }
+    }
 
   return (
     <>
       <div className={classes['exercises-search']}>
         <h1 className={classes['header']}>Search For Exercises</h1>
-        <div className={classes['search-input']}>
-          <input type='text' id='text' name='text' value={searchTerms} onChange={handleInputChange} />
+        <form onSubmit={handleSearchResults} className={classes['search-input']}>
+          <input type='text' id='text' name='text' ref={searchElement} />
           <button className={classes['btn']}>Search</button>
-        </div>
+        </form>
       </div>
 
       <div className={classes['exercises-list']}>
-        {/* {
-          searchedExercises.map(exercise =>( */}
-            <div className={classes['exercise-card']}>
-              <img src="https://v2.exercisedb.io/image/EAZ-j7IevIhqKJ" alt=''/>
+        {!searchTerm && <p>Please search for exercises</p>}
+        {searchTerm && isFetching && <p>Fetching exercises...</p>}
+        {isError && <p>{error.message || "Something Went Wrong!"}</p>}
+        {
+          !isFetching && !isError && searchedExercises && searchedExercises.map(exercise =>(
+            <div className={classes['exercise-card']} key={exercise.id}>
+              <img src={exercise.gifUrl} alt={exercise.name}/>
               <h5 className={classes['sub-headings']}>
-                <span>waist</span>
-                <span>abs</span>
+                <span>{exercise.bodyPart}</span>
+                <span>{exercise.target}</span>
               </h5>
-              <h3 className={`${classes['exercise-name']} ${classes['header']}`}>exercise name</h3>
+              <h3 className={`${classes['exercise-name']} ${classes['header']}`}>{exercise.name}</h3>
+              <p className={classes['exercise-equipment']}>Equipment: <span>{exercise.equipment}</span></p>
+              <button className={`${classes['btn']} ${classes['card-btn']}`}>Add To Favorite</button>
             </div>
-
-            <div className={classes['exercise-card']}>
-              <img src="https://v2.exercisedb.io/image/EAZ-j7IevIhqKJ" alt=''/>
-              <h5 className={classes['sub-headings']}>
-                <span>waist</span>
-                <span>abs</span>
-              </h5>
-              <h3 className={`${classes['exercise-name']} ${classes['header']}`}>exercise name</h3>
-            </div>
-
-            <div className={classes['exercise-card']}>
-              <img src="https://v2.exercisedb.io/image/EAZ-j7IevIhqKJ" alt=''/>
-              <h5 className={classes['sub-headings']}>
-                <span>waist</span>
-                <span>abs</span>
-              </h5>
-              <h3 className={`${classes['exercise-name']} ${classes['header']}`}>exercise name</h3>
-            </div>
-          {/* ))
-        } */}
+          ))
+        } 
       </div>
     </>
   )
