@@ -1,27 +1,113 @@
 /* search container */
 .exercises-search{
-    background-color: red;
+    background-color: purple;
     text-align: center;
-    padding: 3rem 0;
 }
 .exercises-search h1{
     font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--white-font-color);
 }
 .search-input{
-    background-color: blue;
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
 }
 .search-input input{
     padding: .7rem .5rem;
     width: 60%;
+    max-width: 450px;
     font-size: 1rem;
     outline: none;
     border: none;
 }
-.search-input button{
+.search-input input:focus{
+    border: solid 2px var(--light-red-color);
+}
+.search-input .btn{
     padding: .7rem 1rem;
     font-size: .9rem;
-    background-color: yellow;
-    border: none;
+    border: solid 2px transparent;
+    cursor: pointer;
+    background-color: var(--light-red-color);
+    color: var(--white-font-color);
+    transition: .3s ease;
+}
+.search-input .btn:hover{
+    background-color: transparent;
+    border: solid 2px var(--light-red-color);
+    color: var(--light-red-color);
+}
+
+/* exercises list */
+.exercises-list{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+.exercise-card{
+    background-color: yellowgreen;
+    margin-top: 2rem;
+    padding: 1rem;
+    max-width: 500px
+}
+.exercise-card img{
+    width: 100%;
+    object-fit: contain;
+}
+.sub-headings{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.sub-headings span{
+    font-size: .9rem;
+    font-weight: 400;
+    padding: .2rem 1rem;
+    background-color: purple;
+    border-radius: 4rem;
+}
+.sub-headings span:last-child{
+    background-color: orange !important;
+}
+.exercise-name{
+    background-color: green;
+    text-align: start;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 550px){
+    /* search container */
+    .search-input .btn{
+        padding: .7rem 1.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 815px){
+     /* exercises list */
+     .exercises-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1rem;
+        place-items: center;
+    }
+    .exercise-card{
+        max-width: 420px;
+    }
+    /* search container */
+    .search-input input{
+        max-width: 550px;
+    }
+    .exercises-search h1{
+        font-size: 2rem;
+    }
+    .search-input .btn{
+        padding: .7rem 2.2rem;
+        font-size: 1.1rem;
+    }
 }

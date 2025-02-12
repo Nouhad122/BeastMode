@@ -3,9 +3,10 @@
 :root{
     --dark-red-color: #a4030e;
     --light-red-color: #d11a23;
-    --dark-black-color: #111111;
-    --mid-black-color: #161616;
+    --dark-black-color: #131313;
+    --mid-black-color: #181818;
     --light-black-color: #1C1C1C;
+    --white-font-color: #edebeb;
 }
 
 *{
@@ -16,8 +17,17 @@
 body{
     font-size: 1.1rem;
     font-family: "Poppins", serif;
-    background-color: var(--dark-black-color);
+    background-color: var(--mid-black-color);
+    color: var(--white-font-color);
 }
 a{
     text-decoration: none;
+    color: var(--white-font-color);
+}
+.header{
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+}
+section{
+    padding: 3rem 1rem;
 }
