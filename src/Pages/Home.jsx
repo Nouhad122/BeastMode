@@ -15,7 +15,7 @@ const Home = () => {
         `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${selectedBodyPart}`;
 
   const { data: exercises, isFetching, isError, error, refetch} = useQuery({
-      queryKey: ['exercises'],
+      queryKey: ['exercises', selectedBodyPart],
       queryFn: ({ signal }) => fetchData(
         { 
           url,

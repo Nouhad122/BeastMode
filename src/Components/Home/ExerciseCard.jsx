@@ -4,7 +4,7 @@ import Button from '../sharedComps/Button'
 
 const ExerciseCard = ({...exercise}) => {
   return (
-    <div className={classes['exercise-card']} key={exercise.id}>
+    <div className={classes['exercise-card']}>
         <img src={exercise.gifUrl} alt={exercise.name}/>
         <h5 className={classes['sub-headings']}>
         <span>{exercise.bodyPart}</span>

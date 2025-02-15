@@ -7,7 +7,7 @@ const SearchInput = ({ refetch, setSearchTerm}) => {
 
     const handleSearchResults = (event) =>{
         event.preventDefault();
-        if(searchElement.current.value.trim() !== ''){
+        if(searchElement.current.value.trim() !== undefined){
           setSearchTerm(searchElement.current.value);
           refetch();
         }
@@ -17,7 +17,7 @@ const SearchInput = ({ refetch, setSearchTerm}) => {
     <div className={classes['exercises-search']}>
         <h1 className={classes['header']}>Search For Exercises</h1>
         <form onSubmit={handleSearchResults} className={classes['search-input']}>
-            <input type='text' id='text' name='text' ref={searchElement} />
+            <input type='text' id='text' name='text' ref={searchElement}/>
             <Button type='submit' className={classes['search-btn']}>Search</Button>
         </form>
     </div>
