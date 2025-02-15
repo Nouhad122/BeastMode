@@ -7,7 +7,7 @@ export const exercisesOptions = {
 }
 
 
-export const fetchExercises = async ({ url, options, signal }) =>{
+export const fetchData = async ({ url, options, signal }) =>{
     try{
         const response = await fetch(url, {...options, signal });
         if(!response.ok){
