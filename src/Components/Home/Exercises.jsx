@@ -3,20 +3,15 @@ import classes from './Exercises.module.css'
 import ExerciseCard from './ExerciseCard';
 
 const Exercises = ({ searchTerm, exercises, isFetching, isError, error }) => { 
-    let targetedExercises = [];
+    const targetedExercises = searchTerm ?
+      exercises?.filter(exercise =>
+      ["name", "bodyPart", "equipment", "target"]
+      .some(key => exercise[key].toLowerCase().includes(searchTerm.toLowerCase()))
+      ) : exercises ;
 
-    if(exercises && searchTerm !== null){
-      targetedExercises = exercises.filter(
-              exercise =>
-              exercise.name.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-              exercise.bodyPart.toLowerCase().includes(searchTerm?.toLowerCase()) ||
-              exercise.equipment.toLowerCase().includes(searchTerm?.toLowerCase())||
-              exercise.target.toLowerCase().includes(searchTerm?.toLowerCase())
-            )
-    }
-    else{
-      targetedExercises = exercises;
-    }
+      if(targetedExercises && targetedExercises.length === 0){
+        return <p>Your search doesn't match any exercise for the chosen body part</p>
+      }
     
 
   return (
