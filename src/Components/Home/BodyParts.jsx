@@ -85,7 +85,7 @@ const BodyParts = ({ selectedBodyPart, setSelectedBodyPart, refetch}) => {
       <Slider {...settings}>
         {
           bodyPartList.map(bodyPart =>(
-            <div className={classes['bodyPart-wrapper']}>
+            <div className={classes['bodyPart-wrapper']} key={bodyPart}>
               <div className={`${classes['bodyPart-box']}
                ${selectedBodyPart === bodyPart ? `${classes['active']}` : ''}`}
                onClick={() => handleBodyPartSelection(bodyPart)}

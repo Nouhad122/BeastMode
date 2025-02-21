@@ -1,22 +1,27 @@
 import { useQuery } from '@tanstack/react-query'
 import React from 'react'
-import { fetchExerciseDetail } from '../util/http';
-import { exercisesOptions } from '../util/http';
+import { exercisesOptions, fetchExerciseDetail } from '../util/http';
 import { useParams } from 'react-router';
 import classes from './ExerciseDetail.module.css'
 
 const ExerciseDetail = () => {
     const { id } = useParams();
     const { data: exercise, isPending, isError, error} = useQuery({
-        queryKey: ['exercise', { id }],
-        queryFn: ({signal, queryKey}) => fetchExerciseDetail({...queryKey[1], exercisesOptions, signal}),
+        queryKey: ['exercises', id],
+        queryFn: ({signal}) => fetchExerciseDetail({id, options: exercisesOptions, signal}),
         staleTime: 1000 * 60 * 60
     });
+    if(isPending){
+      return <p>Loading...</p>
+    }
+    if(isError){
+      return <p>{error.message || 'Something went wrong'}</p>
+    }
   return (
     <section className={classes['exercise-detail']}>
         <div className={classes['exercise-image']}>
         <img
-         src='https://gymvisual.com/img/p/2/1/5/7/0/21570.gif' 
+         src={exercise.gifUrl} 
          alt='exercise name' 
        /> 
         </div>
