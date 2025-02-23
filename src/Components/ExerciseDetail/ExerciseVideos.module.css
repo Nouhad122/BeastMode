@@ -1,0 +1,40 @@
+.videos-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.2rem 1rem;
+}
+.exercise-title-wrapper{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.exercise-name{
+    color: var(--light-red-color);
+}
+.exercise-video{
+    background-color: var(--light-black-color);
+    height: 20rem;
+    max-width: 27rem;
+}
+.exercise-video img{
+    width: 100%;
+}
+.exercise-video p{
+    padding: .5rem .5rem 0 .5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 815px){
+     .videos-wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        gap: 2rem;
+        place-items: center;
+    }
+}

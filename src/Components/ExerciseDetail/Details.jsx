@@ -3,7 +3,7 @@ import classes from './Details.module.css'
 
 const Details = ({ exercise }) => {
     return (
-      <section className={classes['exercise-detail']}>
+      <section className={classes['exercise-detail-section']}>
         <div className={classes['exercise-image']}>
           <img
            src={exercise.gifUrl} 

@@ -38,10 +38,23 @@ a{
 section{
     padding: 3rem 1rem;
 }
+.list-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.2rem 1rem;
+    gap: 2rem;
+}
+
 
 @media screen and (min-width: 815px){
     html{
        font-size: 14px; 
+    }
+    .list-wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        place-items: center;
     }
     
 }

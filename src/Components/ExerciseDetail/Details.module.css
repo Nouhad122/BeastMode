@@ -1,4 +1,4 @@
-.exercise-detail{
+.exercise-detail-section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,7 @@
 }
 
 @media screen and (min-width: 815px){
-    .exercise-detail{
+    .exercise-detail-section{
         text-align: start;
         flex-direction: row;
         justify-content: space-between;
@@ -81,7 +81,7 @@
     }
 }
 @media screen and (min-width: 1050px){
-    .exercise-detail{
+    .exercise-detail-section{
         padding: 3rem 8rem;
     }
 }

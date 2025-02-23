@@ -1,5 +1,4 @@
 import React from 'react'
-import classes from './Exercises.module.css'
 import ExerciseCard from './ExerciseCard';
 
 const Exercises = ({ searchTerm, exercises, isFetching, isError, error }) => { 
@@ -15,7 +14,7 @@ const Exercises = ({ searchTerm, exercises, isFetching, isError, error }) => {
     
 
   return (
-      <div className={classes['exercises-list']}>
+      <div className='list-wrapper'>
         {isFetching && <p>Fetching exercises...</p>}
         {isError && <p>{error.message || "Something Went Wrong!"}</p>}
         {

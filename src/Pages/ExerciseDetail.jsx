@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { exercisesOptions, fetchData, fetchExerciseDetail, youtubeOptions } from '../util/http';
+import { exercisesOptions, fetchData, youtubeOptions } from '../util/http';
 import { useParams } from 'react-router';
 import Details from '../Components/ExerciseDetail/Details';
 import ExerciseVideos from '../Components/ExerciseDetail/ExerciseVideos';
@@ -10,7 +10,7 @@ const ExerciseDetail = () => {
 
   const { data: exercise, isLoading, isError, error } = useQuery({
     queryKey: ['exercises', id],
-    queryFn: ({ signal }) => fetchExerciseDetail({ id, options: exercisesOptions, signal }),
+    queryFn: ({ signal }) => fetchData({ url: `https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`, options: exercisesOptions, signal }),
     staleTime: 1000 * 60 * 60
   });
 
