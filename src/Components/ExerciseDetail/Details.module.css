@@ -18,7 +18,7 @@
     margin-top: 1rem;
 }
 .exercise-name{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: capitalize;
     font-weight: 400;
 }
@@ -42,13 +42,13 @@
 }
 .sub-headings strong{
     text-transform: capitalize;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 .instructions-wrapper{
     text-align: start;
-    margin-top: 1.8rem;
-    font-size: .9rem;
-    padding: 0 1rem;
+    margin-top: 2.8rem;
+    font-size: 1.1rem;
+    padding: 0 2rem;
 }
 .instructions-wrapper li{
     margin-top: 1rem;
