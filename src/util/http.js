@@ -1,8 +1,16 @@
 export const exercisesOptions = {
     method: 'GET',
     headers:{
-        "x-rapidapi-host": "exercisedb.p.rapidapi.com",
-        "x-rapidapi-key": import.meta.env.VITE_RAPID_API_KEY || ''
+        "X-Rapidapi-Host": "exercisedb.p.rapidapi.com",
+        "X-Rapidapi-Key": import.meta.env.VITE_RAPID_API_KEY || ''
+    }
+}
+
+export const youtubeOptions = {
+    method: 'GET',
+    headers: {
+        "X-Rapidapi-Host": "youtube-search-and-download.p.rapidapi.com",
+        "X-Rapidapi-Key": import.meta.env.VITE_RAPID_API_KEY || ''
     }
 }
 

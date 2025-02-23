@@ -21,7 +21,7 @@
     border-bottom: solid 3px var(--light-red-color);
 }
 .menu-bars{
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
     position: relative;
     z-index: 901;
@@ -35,6 +35,7 @@
     background-color: var(--light-black-color);
     list-style: none;
     transition: top .4s ease;
+    font-size: 1.2rem;
 }
 .opened-list{
     top: 100%;

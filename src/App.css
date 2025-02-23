@@ -18,6 +18,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 12px;
+}
 body{
     font-size: 1.1rem;
     font-family: "Poppins", serif;
@@ -34,4 +37,11 @@ a{
 }
 section{
     padding: 3rem 1rem;
+}
+
+@media screen and (min-width: 815px){
+    html{
+       font-size: 14px; 
+    }
+    
 }

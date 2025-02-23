@@ -2,7 +2,7 @@
     text-align: center;
 }
 .exercises-search h1{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
     color: var(--white-font-color);
 }
@@ -15,7 +15,7 @@
     padding: .7rem .5rem;
     width: 60%;
     max-width: 450px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     outline: none;
     border: none;
 }
@@ -26,7 +26,6 @@
 @media screen and (min-width: 550px){
     .search-btn{
        padding: .7rem 1.8rem;
-       font-size: 1rem;
    }
 }
 
@@ -39,6 +38,5 @@
     }
     .search-btn{
         padding: .9rem 2.4rem !important;
-        font-size: 1.1rem !important;
     }
 }

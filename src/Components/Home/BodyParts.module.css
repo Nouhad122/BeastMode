@@ -17,11 +17,11 @@
     background-color: var(--light-red-color);
 }
 .bodyPart-icon{
-    font-size: 3rem;
+    font-size: 4rem;
 }
 .bodyPart-header{
     text-transform: capitalize;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -29,7 +29,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
+    font-size: 2rem;
     cursor: pointer;
     color: white;
     background: var(--light-red-color);

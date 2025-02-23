@@ -3,7 +3,7 @@
     margin-top: 2rem;
     padding: 1rem;
     width: 280px;
-    height: 550px;
+    height: 500px;
     position: relative;
     border-top: solid 5px var(--light-red-color);
 }
@@ -19,7 +19,7 @@
     margin-top: .7rem;
 }
 .sub-headings span{
-    font-size: .9rem;
+    font-size: 1.1rem;
     font-weight: 400;
     padding: .2rem 1rem;
     background-color: var(--purple-color);
@@ -33,11 +33,11 @@
     text-align: start;
     margin-top: 1rem;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-transform: capitalize;
 }
 .exercise-equipment{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: .8rem;
     font-weight: 700;
 }

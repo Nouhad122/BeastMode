@@ -11,7 +11,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem .9rem;
+    padding: 3.5rem 1.5rem;
     text-align: center;
 }
 .primary-header{
@@ -23,7 +23,7 @@
     display: block;
 }
 .primary-header span:first-child{
-    font-size: 1rem;
+    font-size: 1.5rem;
     letter-spacing: .2rem;
     font-weight: 300;
     text-transform: capitalize;
@@ -31,14 +31,14 @@
 }
 .primary-header span:nth-child(2){
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: .4rem;
     margin: .8rem 0;
     animation: moveToRight 1s ease-out;
 }
 .primary-header span:last-child{
-    font-size: .9rem;
+    font-size: 1.2rem;
     font-weight: 300;
     text-transform: capitalize;
     animation: moveToLeft 1s ease-out;
@@ -46,7 +46,7 @@
 .btn:link,
 .btn:visited{
     display: inline-block;
-    font-size: .9rem;
+    font-size: 1.5rem;
     padding: .4rem 2.2rem;
     position: relative;
     z-index: 1;
@@ -83,20 +83,12 @@
     .primary-header{
         min-width: 400px;
     }
-    .primary-header span:first-child{
-        font-size: 1.2rem;
-    }
     .primary-header span:nth-child(2){
-        font-size: 2rem;
         letter-spacing: .6rem;
-    }
-    .primary-header span:last-child{
-        font-size: 1rem;
     }
     .btn:link,
     .btn:visited{
         padding: .6rem 4rem;
-        font-size: 1.1rem;
     }
 }
 
@@ -105,16 +97,8 @@
         min-width: 500px;
     }
     .primary-header span:first-child{
-        font-size: 1.3rem;
         letter-spacing: .2rem;
     }
-    .primary-header span:nth-child(2){
-        font-size: 2.6rem;
-    }
-    .primary-header span:last-child{
-        font-size: 1.1rem;
-    }
-    
     .btn:link,
     .btn:visited{
         padding: .6rem 8rem;
