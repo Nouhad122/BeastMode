@@ -1,5 +1,6 @@
 .exercises-search{
     text-align: center;
+    margin-bottom: 3rem;
 }
 .exercises-search h1{
     font-size: 1.8rem;
@@ -29,7 +30,7 @@
    }
 }
 
-@media screen and (min-width: 815px){
+@media screen and (min-width: 825px){
     .search-input input{
         max-width: 550px;
     }

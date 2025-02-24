@@ -30,7 +30,7 @@
     overflow: hidden;
 }
 
-@media screen and (min-width: 815px){
+@media screen and (min-width: 825px){
      .videos-wrapper{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));

@@ -55,7 +55,7 @@
     color: var(--red-font-color);
 }
 
-@media screen and (min-width: 815px){
+@media screen and (min-width: 825px){
     .menu-bars{
         display: none;
     }

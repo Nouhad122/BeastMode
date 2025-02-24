@@ -54,7 +54,7 @@
     margin-top: 1rem;
 }
 
-@media screen and (min-width: 815px){
+@media screen and (min-width: 825px){
     .exercise-detail-section{
         text-align: start;
         flex-direction: row;

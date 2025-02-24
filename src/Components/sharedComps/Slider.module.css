@@ -1,0 +1,50 @@
+.slider-all{
+    margin: 5rem auto 4rem auto;
+    padding: 0 4.2rem;
+    max-width: 36.5rem;
+}
+.nextArrow, .prevArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: white;
+    background: var(--light-red-color);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .nextArrow:hover, .prevArrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .nextArrow {
+    right: -50px;
+  }
+  
+  .prevArrow {
+    left: -50px;
+  }
+
+@media screen and (min-width: 825px){
+    .slider-all{
+        max-width: 57rem;
+    }
+}
+@media screen and (min-width: 1180px) {
+    .slider-all{
+        max-width: 82rem;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .slider-all{
+        max-width: 100%;
+    }
+}

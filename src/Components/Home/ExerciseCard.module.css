@@ -1,11 +1,15 @@
+.card-link{
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+    height: 42rem;
+}
 .exercise-card{
     background-color: var(--light-black-color);
-    margin-top: 2rem;
     padding: 1rem;
-    width: 280px;
-    height: 500px;
     position: relative;
     border-top: solid 5px var(--light-red-color);
+    height: 100%;
 }
 
 .exercise-card img{
@@ -35,6 +39,10 @@
     font-weight: 600;
     font-size: 1.4rem;
     text-transform: capitalize;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .exercise-equipment{
     font-size: 1rem;
@@ -51,17 +59,9 @@
     right: 1rem;
 }
 
-@media screen and (min-width: 550px){
-    .exercise-card{
-        width: 360px;
-        height: 580px;
-    }
-    
-}
-
-@media screen and (min-width: 815px){
-    .exercise-card{
+@media screen and (min-width: 825px){
+    .card-link{
         width: 24rem;
-        height: 42rem;
+        height: 40rem;
     }
 }

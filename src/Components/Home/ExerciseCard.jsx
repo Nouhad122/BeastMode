@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 
 const ExerciseCard = ({...exercise}) => {
   return (
-    <Link to={`/exercises/${exercise.name}/${exercise.id}`}>
+    <Link to={`/exercises/${exercise.name}/${exercise.id}`} className={classes['card-link']}>
       <div className={classes['exercise-card']}>
           <img src={exercise.gifUrl} alt={exercise.name}/>
           <h5 className={classes['sub-headings']}>

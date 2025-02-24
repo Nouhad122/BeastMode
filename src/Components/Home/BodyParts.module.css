@@ -1,8 +1,3 @@
-.bodyPart-container{
-    padding: 4rem 1rem;
-    margin: 8rem auto 4rem auto;
-    padding: 0 4.2rem;
-}
 .bodyPart-wrapper{
     padding: 0 1.2rem;
 }
@@ -17,41 +12,11 @@
     background-color: var(--light-red-color);
 }
 .bodyPart-icon{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .bodyPart-header{
     text-transform: capitalize;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
 }
-
-.nextArrow, .prevArrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    background: var(--light-red-color);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .nextArrow:hover, .prevArrow:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
-  .nextArrow {
-    right: -50px;
-  }
-  
-  .prevArrow {
-    left: -50px;
-  }
   
