@@ -16,7 +16,7 @@
 }
 .exercise-video{
     background-color: var(--light-black-color);
-    height: 20rem;
+    height: 22rem;
     max-width: 27rem;
 }
 .exercise-video img{
@@ -28,6 +28,13 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.video-title{
+    font-size: 1.2rem;
+}
+.video-channelName{
+    font-size: .9rem;
+    color: var(--silver-color);
 }
 
 @media screen and (min-width: 825px){

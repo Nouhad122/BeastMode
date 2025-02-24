@@ -20,8 +20,13 @@ const Details = ({ exercise }) => {
           <p className={classes['sub-headings']}>
               <strong>secondary muscles:</strong>
               {
-                exercise.secondaryMuscles.map(muscle => <span key={muscle}>{muscle}</span>)
+                exercise.secondaryMuscles.map(muscle =>
+                   <span key={muscle} className={classes['exercise-muscle']}>{muscle}</span>)
               }
+          </p>
+          <p className={classes['sub-headings']}>
+              <strong>Equipment:</strong>
+              <span className={classes['exercise-equipment']}>{exercise.equipment}</span>
           </p>
           <ul className={classes['instructions-wrapper']}>
             {

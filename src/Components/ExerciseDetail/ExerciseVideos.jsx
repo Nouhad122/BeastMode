@@ -5,7 +5,7 @@ const ExerciseVideos = ({ exerciseVideos, exerciseName }) => {
   const videos = useMemo(() => exerciseVideos?.contents?.filter((item) => item.video) || [], [exerciseVideos]);
 
   return (
-    <section className={classes['exercise-videos-section']}>
+    <section>
         <h1 className={classes['exercise-title-wrapper']}>
             Watch <span className={classes['exercise-name']}>
             {exerciseName}
@@ -27,6 +27,7 @@ const ExerciseVideos = ({ exerciseVideos, exerciseName }) => {
                 >
                 <img src={item.video.thumbnails[0].url} alt={`Thumbnail for ${item.video.title}`} />
                 <p className={classes['video-title']}>{item.video.title}</p>
+                <p className={classes['video-channelName']}>{item.video.channelName}</p>
                 </a>
             ))}
         </div>

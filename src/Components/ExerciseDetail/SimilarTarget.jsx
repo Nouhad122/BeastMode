@@ -3,17 +3,17 @@ import ExerciseCard from '../Home/ExerciseCard';
 import SliderComp from '../sharedComps/Slider';
 import classes from './ExerciseVideos.module.css';
 
-const SimilarTarget = ({ similarTargetExercises, exerciseTarget }) => {
+const SimilarTarget = ({ similarExercises, similarity, headerContent }) => {
   return (
     <section>
         <h1 className={classes['exercise-title-wrapper']}>
-            Watch <span className={classes['exercise-name']}>
-            {exerciseTarget}
-            </span> exercise videos
+            similar exercises {headerContent}  <span className={classes['exercise-name']}>
+            {similarity}
+            </span>
         </h1>
         <SliderComp>
             {
-                similarTargetExercises.map(exercise =>(
+                similarExercises.map(exercise =>(
                     <ExerciseCard key={exercise.id} {...exercise}/>
                 ))
             }

@@ -27,7 +27,7 @@ const ExerciseDetail = () => {
   });
 
   const { data: similarTargetExercises, isLoading: isLoadingTarget, isError: isTargetError, error: targetError } = useQuery({
-    queryKey: ['similarExercises', exercise?.target],
+    queryKey: ['similarTargetExercises', exercise?.target],
     queryFn: ({signal}) => fetchData({
       url:`https://exercisedb.p.rapidapi.com/exercises/target/${exercise.target}?limit=10&offset=0`,
       options: exercisesOptions,
@@ -37,7 +37,18 @@ const ExerciseDetail = () => {
     enabled: !!exercise?.target
   });
 
-  if (isLoading || isLoadingVideos || isLoadingTarget) {
+  const { data: similarEquipmentExercises, isLoading: isLoadingEquipment, isError: isEquipmentError, error: equipmentError } = useQuery({
+    queryKey: ['similarEquipmentExercises', exercise?.equipment],
+    queryFn: ({signal}) => fetchData({
+      url:`https://exercisedb.p.rapidapi.com/exercises/equipment/${exercise.equipment}?limit=10&offset=0`,
+      options: exercisesOptions,
+      signal
+    }),
+    staleTime: 1000 * 60 * 60,
+    enabled: !!exercise?.equipment
+  });
+
+  if (isLoading || isLoadingVideos || isLoadingTarget || isLoadingEquipment) {
     return <p>Loading...</p>;
   }
 
@@ -50,13 +61,25 @@ const ExerciseDetail = () => {
   if(isTargetError){
     return <p>{targetError?.message || 'Could not load similar target exercises. Please try again later.'}</p>;
   }
+  if(isEquipmentError){
+    return <p>{equipmentError?.message || 'Could not load similar equipment exercises. Please try again later.'}</p>;
+  }
   
 
   return (
     <>
       <Details exercise={exercise} />
       <ExerciseVideos exerciseVideos={exerciseVideos} exerciseName={exercise.name} />
-      <SimilarTarget similarTargetExercises={similarTargetExercises} exerciseTarget={exercise.target}/>
+      <SimilarTarget
+       similarExercises={similarTargetExercises} 
+       similarity={exercise.target}
+       headerContent="to target"
+      />
+      <SimilarTarget 
+        similarExercises={similarEquipmentExercises} 
+        similarity={exercise.equipment}
+        headerContent="using"
+      />
     </>
   );
 };
