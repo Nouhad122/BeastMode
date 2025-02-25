@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <li>
                 <NavLink
-                to={`/`} 
+                to={`exercises`} 
                 className={({isActive}) =>
                 isActive ? classes.active : ''}>
                 Exercises

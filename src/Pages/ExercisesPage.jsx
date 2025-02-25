@@ -1,35 +1,30 @@
 import React, { useState } from 'react'
-import ImageBox from '../Components/Home/ImageBox'
 import Exercises from '../Components/Home/Exercises'
 import SearchInput from '../Components/Home/SearchInput'
 import { useQuery } from '@tanstack/react-query';
 import { exercisesOptions, fetchData } from '../util/http';
 import BodyParts from '../Components/Home/BodyParts';
 
-const Home = () => {
+const ExercisesPage = () => {
   const [selectedBodyPart, setSelectedBodyPart] = useState('all');
   const [searchTerm, setSearchTerm] = useState(null);
 
   const url = selectedBodyPart === 'all' ?
-        'https://exercisedb.p.rapidapi.com/exercises?limit=1323&offset=0':
-        `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${selectedBodyPart}?limit=1323&offset=0`;
+          'https://exercisedb.p.rapidapi.com/exercises?limit=1323&offset=0':
+          `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${selectedBodyPart}?limit=1323&offset=0`;
 
   const { data: exercises, isFetching, isError, error, refetch} = useQuery({
       queryKey: ['exercises', selectedBodyPart, searchTerm],
       queryFn: ({ signal }) => fetchData(
         { 
-          url,
-          options: exercisesOptions,
-          signal
+            url,
+            options: exercisesOptions,
+            signal
         }),
       staleTime: 1000 * 60 * 60
   });
-
   return (
-    <>
-      <ImageBox />
-
-      {/* <section>
+    <section>
         <SearchInput
          setSearchTerm={setSearchTerm}
          refetch={refetch}
@@ -49,10 +44,8 @@ const Home = () => {
          isError={isError} 
          error={error}
         />
-      </section> */}
-    </>
+    </section>
   )
 }
 
-export default Home
-
+export default ExercisesPage
