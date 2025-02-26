@@ -1,15 +1,19 @@
-.card-link{
-    display: block;
-    width: 100%;
-    max-width: 28rem;
-    height: 42rem;
-}
-.exercise-card{
+.exercise-card {
     background-color: var(--light-black-color);
-    padding: 1rem;
     position: relative;
+    z-index: 1;
     border-top: solid 5px var(--light-red-color);
+    width: 100%;
+    max-width: 26rem;
+    height: 40rem;
+}
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
     height: 100%;
+    background-color: blue;
 }
 
 .exercise-card img{
@@ -53,14 +57,15 @@
     font-weight: 400;
     margin-left: .3rem;
 }
-.card-btn{
+.card-btn {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-}
+    z-index: 2;
+  }
 
 @media screen and (min-width: 825px){
-    .card-link{
+    .exercise-card{
         width: 24rem;
         height: 40rem;
     }

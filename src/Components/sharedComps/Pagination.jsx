@@ -15,8 +15,8 @@ const Pagination = ({ pageCount, onPageChange, currentPage}) => {
       containerClassName={classes.pagination}
       pageClassName={classes['page-item']}
       pageLinkClassName={classes['page-link']}
-      previousClassName={classes['page-item']}
-      nextClassName={classes['page-item']}
+      previousClassName={`${classes['page-item']} ${classes['prev-item']}`}
+      nextClassName={`${classes['page-item']} ${classes['next-item']}`}
       previousLinkClassName={classes['page-link']}
       nextLinkClassName={classes['page-link']}
       activeClassName={classes.active}
