@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 
 const ModalContext = createContext({
-    scheduleOpen: false,
+    scheduleIsOpen: false,
     showSchedule: () =>{},
     hideSchedule: () =>{}
 })
@@ -14,11 +14,11 @@ export const ModalContextProvider = ({children}) => {
     }
 
     const hideScheduleModal = () =>{
-        setIsOpenedScheduleModal(true);
+        setIsOpenedScheduleModal(false);
     }
 
     const ModalContextValue = ({
-        scheduleOpen: isOpenSchduleModal,
+        scheduleIsOpen: isOpenSchduleModal,
         showSchedule: showScheduleModal,
         hideSchedule: hideScheduleModal
     })

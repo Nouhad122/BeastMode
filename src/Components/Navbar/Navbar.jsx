@@ -13,21 +13,12 @@ const Navbar = () => {
   return (
     <nav className={classes.navbar}>
         <div className={classes['logo-box']}>
-            <img src={logo} alt='gym logo' className={classes.logo}/>
+        <NavLink to={`/`}><img src={logo} alt='gym logo' className={classes.logo}/></NavLink>
         </div>
     
         <LuSquareMenu onClick={handleMenuOpening} className={classes['menu-bars']}/>
 
         <ul className={`${classes['menu-list']} ${openedMenu ? classes['opened-list'] : ''}` }>
-            <li>
-                <NavLink
-                to={`/`} 
-                className={({isActive}) =>
-                isActive ? classes.active : ''}>
-                Home
-                </NavLink>
-            </li>
-
             <li>
                 <NavLink
                 to={`exercises`} 
@@ -42,7 +33,7 @@ const Navbar = () => {
                 to={`/`} 
                 className={({isActive}) =>
                 isActive ? classes.active : ''}>
-                Favorites
+                My Schedule
                 </NavLink>
             </li>
 

@@ -4,27 +4,27 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.039);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 999;
   }
-  
   .modal {
-    background: white;
-    padding: 2rem;
+    background: var(--light-black-color);
+    padding: 1rem 2rem;
     border-radius: 8px;
     width: 90%;
-    max-width: 400px;
+    max-width: 40rem;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.091);
   }
   
   .modal-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--white-font-color);
   }
   
   .day-list {
@@ -33,33 +33,30 @@
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   
   .day-item {
     padding: 0.8rem;
     background: #f4f4f4;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: border 0.3s;
+    color: var(--mid-black-color);
+    text-align: start;
+    position: relative;
+    font-size: 1.2rem;
   }
   
   .day-item:hover {
-    background: #ddd;
+    background: #f4f4f4b9;
+  }
+  .day-item svg{
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-red-color);
+    font-size: 1.5rem !important;
   }
   
-  .close-btn {
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 1rem;
-  }
-  
-  .close-btn:hover {
-    background: #ff3333;
-  }
   

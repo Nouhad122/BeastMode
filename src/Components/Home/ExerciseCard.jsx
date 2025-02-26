@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import classes from './ExerciseCard.module.css';
 import Button from '../sharedComps/Button';
 import { Link } from 'react-router';
 import ScheduleModal from '../Modals/scheduleModal';
+import ModalContext from '../../Context/ModalContext';
 
 const ExerciseCard = ({...exercise}) => {
-  
+  const { scheduleIsOpen, showSchedule, hideSchedule } = useContext(ModalContext);
   return (
     <>
     <div className={classes['exercise-card']}>
@@ -24,13 +25,13 @@ const ExerciseCard = ({...exercise}) => {
       <Button 
         type="button" 
         className={classes['card-btn']}
-        onClick={showScheduleModal}
+        onClick={showSchedule}
       >
         Add To Schedule
       </Button>
     </div>
 
-    {isOpenSchduleModal && <ScheduleModal />}
+    {scheduleIsOpen && <ScheduleModal onClose={hideSchedule}/>}
     </>
   )
 }
