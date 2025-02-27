@@ -1,0 +1,37 @@
+.schedule-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.day-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.day-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--white-font-color);
+    margin-bottom: 0.5rem;
+}
+.list-wrapper {
+    display: grid;
+    gap: 2rem;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+.no-exercises {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+    font-style: italic;
+}
+
+@media screen and (min-width: 825px) {
+    .list-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
+}
+

@@ -1,31 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import classes from './ExerciseCard.module.css';
 import Button from '../sharedComps/Button';
 import { Link } from 'react-router';
 import ScheduleModal from '../Modals/scheduleModal';
 import ModalContext from '../../Context/ModalContext';
-import { useDispatch } from 'react-redux';
-import { scheduleActions } from '../../store/schedule-slice';
 
-const ExerciseCard = ({scheduledExercise, day, ...exercise}) => {
+const ExerciseCard = ({ day, ...exercise }) => {
   const { scheduleIsOpen, showSchedule, hideSchedule, selectedExercise } = useContext(ModalContext);
-  const dispatch = useDispatch();
 
-  const removeFromSchedule = () =>{
-    dispatch(scheduleActions.removeFromSchedule({day, exerciseId: exercise.id}));
-  }
-
-  const handleCardBtn = () =>{
-    if(scheduledExercise){
-      removeFromSchedule();
-    }
-    else{
-      showSchedule(exercise);
-    }
-  }
   return (
     <>
-    <div className={`${classes['exercise-card']} ${scheduledExercise ? classes['scheduled-card'] : undefined}`}>
+    <div className={classes['exercise-card']}>
       <Link to={`/exercises/${exercise.name}/${exercise.id}`} className={classes['card-link']}>
         <img src={exercise.gifUrl} alt={exercise.name}/>
         <h5 className={classes['sub-headings']}>
@@ -41,9 +26,9 @@ const ExerciseCard = ({scheduledExercise, day, ...exercise}) => {
       <Button 
         type="button" 
         className={classes['card-btn']}
-        onClick={handleCardBtn}
+        onClick={() => showSchedule(exercise)}
       >
-        {scheduledExercise ? 'Remove From Schedule' : 'Add To Schedule'}
+        Add To Schedule
       </Button>
     </div>
 

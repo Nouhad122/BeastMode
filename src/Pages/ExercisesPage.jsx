@@ -44,8 +44,7 @@ const ExercisesPage = () => {
          isFetching={isFetching} 
          isError={isError} 
          error={error}
-        />
-        
+        />  
     </section>
   )
 }
