@@ -4,9 +4,25 @@ import Button from '../sharedComps/Button';
 import { Link } from 'react-router';
 import ScheduleModal from '../Modals/scheduleModal';
 import ModalContext from '../../Context/ModalContext';
+import { useDispatch } from 'react-redux';
+import { scheduleActions } from '../../store/schedule-slice';
 
-const ExerciseCard = ({...exercise}) => {
-  const { scheduleIsOpen, showSchedule, hideSchedule } = useContext(ModalContext);
+const ExerciseCard = ({scheduledExercise, day, ...exercise}) => {
+  const { scheduleIsOpen, showSchedule, hideSchedule, selectedExercise } = useContext(ModalContext);
+  const dispatch = useDispatch();
+
+  const removeFromSchedule = () =>{
+    dispatch(scheduleActions.removeFromSchedule({day, exerciseId: exercise.id}));
+  }
+
+  const handleCardBtn = () =>{
+    if(scheduledExercise){
+      removeFromSchedule();
+    }
+    else{
+      showSchedule(exercise);
+    }
+  }
   return (
     <>
     <div className={classes['exercise-card']}>
@@ -21,17 +37,19 @@ const ExerciseCard = ({...exercise}) => {
           Equipment: <span>{exercise.equipment}</span>
         </p>
       </Link>
-
+    
       <Button 
         type="button" 
         className={classes['card-btn']}
-        onClick={showSchedule}
+        onClick={handleCardBtn}
       >
-        Add To Schedule
+        {scheduledExercise ? 'Remove From Schedule' : 'Add To Schedule'}
       </Button>
     </div>
 
-    {scheduleIsOpen && <ScheduleModal onClose={hideSchedule}/>}
+    {scheduleIsOpen && selectedExercise?.id === exercise.id &&(
+      <ScheduleModal onClose={hideSchedule} exercise={selectedExercise}/>
+    )}
     </>
   )
 }

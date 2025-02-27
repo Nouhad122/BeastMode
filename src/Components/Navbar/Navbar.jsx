@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <li>
                 <NavLink
-                to={`/`} 
+                to={`my-schedule`} 
                 className={({isActive}) =>
                 isActive ? classes.active : ''}>
                 My Schedule
