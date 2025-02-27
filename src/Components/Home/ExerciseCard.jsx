@@ -25,7 +25,7 @@ const ExerciseCard = ({scheduledExercise, day, ...exercise}) => {
   }
   return (
     <>
-    <div className={classes['exercise-card']}>
+    <div className={`${classes['exercise-card']} ${scheduledExercise ? classes['scheduled-card'] : undefined}`}>
       <Link to={`/exercises/${exercise.name}/${exercise.id}`} className={classes['card-link']}>
         <img src={exercise.gifUrl} alt={exercise.name}/>
         <h5 className={classes['sub-headings']}>

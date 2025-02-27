@@ -1,7 +1,7 @@
 .slider-all{
     margin: 5rem auto 4rem auto;
     padding: 0 4.2rem;
-    max-width: 36.5rem;
+    max-width: 40.5rem;
 }
 .nextArrow, .prevArrow {
     position: absolute;
@@ -35,15 +35,10 @@
 
 @media screen and (min-width: 825px){
     .slider-all{
-        max-width: 57rem;
+        max-width: 62rem;
     }
 }
 @media screen and (min-width: 1180px) {
-    .slider-all{
-        max-width: 82rem;
-    }
-}
-@media screen and (min-width: 1400px) {
     .slider-all{
         max-width: 100%;
     }

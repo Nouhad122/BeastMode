@@ -6,6 +6,7 @@
     width: 100%;
     max-width: 26rem;
     height: 40rem;
+    margin: 0 auto;
 }
   .card-link {
     display: block;
@@ -67,5 +68,11 @@
     .exercise-card{
         width: 24rem;
         height: 40rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .scheduled-card{
+        margin: 0;
     }
 }

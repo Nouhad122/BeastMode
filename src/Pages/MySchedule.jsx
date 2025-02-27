@@ -12,11 +12,17 @@ const MySchedule = () => {
              (day) =>(
               <div key={day}>
                 <h2>{day}</h2>
-                <div>
+                <div className='list-wrapper'>
                     { 
                      schedule[day.toLowerCase()]?.length > 0 ?
-                        schedule[day.toLowerCase()].map(exercise => <ExerciseCard key={exercise.id} {...exercise} day={day.toLowerCase()} scheduledExercise/>)
-                        : <p>No Exercises, Sometimes, Warriors need to rest</p>
+                        schedule[day.toLowerCase()].map(exercise =>
+                          <ExerciseCard 
+                            key={exercise.id} 
+                            {...exercise} 
+                            day={day.toLowerCase()} 
+                            scheduledExercise
+                          />)
+                        : <p>No exercises scheduled.</p>
                     }
                 </div> 
               </div>
