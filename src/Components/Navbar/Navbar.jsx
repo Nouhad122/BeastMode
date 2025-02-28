@@ -39,7 +39,7 @@ const Navbar = () => {
 
             <li>
                 <NavLink
-                to={`/`} 
+                to={`macros-calculator`} 
                 className={({isActive}) =>
                 isActive ? classes.active : ''}>
                 Macros Calculator
