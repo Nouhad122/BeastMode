@@ -1,0 +1,12 @@
+.title-wrapper{
+    text-align: center;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+}
+.sub-text{
+    color: var(--silver-color);
+}
