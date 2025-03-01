@@ -45,6 +45,15 @@ const Navbar = () => {
                 Macro Calculator
                 </NavLink>
             </li>
+
+            <li>
+                <NavLink
+                to={`personal-macro`} 
+                className={({isActive}) =>
+                isActive ? classes.active : ''}>
+                Personal Macro
+                </NavLink>
+            </li>
         </ul>
     </nav>
   )

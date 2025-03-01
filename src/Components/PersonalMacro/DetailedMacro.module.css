@@ -1,0 +1,357 @@
+.container {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
+  .summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+  }
+  
+  .goalSection {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .calorieBox {
+    background-color: #3498db;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calorieBox h3 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .macroChart {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .chartContainer {
+    height: 40px;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+  }
+  
+  .proteinBar {
+    background-color: #e74c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .carbBar {
+    background-color: #2ecc71;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .fatBar {
+    background-color: #f39c12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  
+  .legendItem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .proteinSwatch, .carbSwatch, .fatSwatch {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+  
+  .proteinSwatch {
+    background-color: #e74c3c;
+  }
+  
+  .carbSwatch {
+    background-color: #2ecc71;
+  }
+  
+  .fatSwatch {
+    background-color: #f39c12;
+  }
+  
+  .detailedResults {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .macroDetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  .macroCard {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .macroHeader {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .macroValue {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .macroPercent {
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 0.3rem;
+  }
+  
+  .macroSubInfo {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+  }
+  
+  .alternativeGoals {
+    margin-top: 1rem;
+  }
+  
+  .goalCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  .goalCard {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+  }
+  
+  .goalCard h3 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .goalValue {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+  
+  .infoSection {
+    margin-top: 1rem;
+  }
+  
+  .infoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .infoItem {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .infoLabel {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .infoValue {
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .actionButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .backButton, .startButton, .deleteButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .backButton:hover, .startButton:hover {
+    background-color: #2980b9;
+  }
+  
+  .deleteButton {
+    background-color: #e74c3c;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .emptyState p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .summary, .macroDetails, .goalCards, .infoGrid {
+    flex-direction: column;
+  }
+  
+  .macroCard, .goalCard, .infoItem {
+    min-width: unset;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .macroValue {
+    font-size: 1.5rem;
+  }
+  
+  .goalValue, .infoValue {
+    font-size: 1.2rem;
+  }
+  
+  .chartContainer {
+    height: 30px;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .backButton, .startButton, .deleteButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  @media screen and (min-width: 825px) {
+    .container {
+      max-width: 1200px;
+      padding: 2rem;
+    }
+    
+    .summary, .macroDetails, .goalCards, .infoGrid {
+      flex-direction: row;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .macroValue {
+      font-size: 2rem;
+    }
+    
+    .goalValue, .infoValue {
+      font-size: 1.3rem;
+    }
+    
+    .chartContainer {
+      height: 40px;
+    }
+    
+    .actionButtons {
+      flex-direction: row;
+    }
+    
+    .backButton, .startButton, .deleteButton {
+      width: auto;
+    }
+  }

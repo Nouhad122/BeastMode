@@ -105,6 +105,10 @@ input[type="number"]:focus{
     border: solid 2px var(--purple-color);
     color: var(--purple-color);
 }
+.error{
+    color: var(--light-red-color);
+    font-size: 1.1rem;
+}
 
 @media screen and (min-width: 825px){
     .flex-text{

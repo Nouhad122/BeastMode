@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import classes from './UserInputs.module.css';
 import Button from '../sharedComps/Button';
 import { VscDebugStart } from "react-icons/vsc";
+import { useNavigate } from 'react-router';
 
 const UserInputs = () => {
+  const navigate = useNavigate();
+
   // Form state
   const [unit, setUnit] = useState('imperial');
   const [primaryGoal, setPrimaryGoal] = useState('lose_fat');
@@ -35,13 +38,12 @@ const UserInputs = () => {
     if (age < 0 || age > 130) newErrors.age = 'Please enter a valid age'
 
     if (!weight) newErrors.weight = 'Weight is required';
-    if (unit === 'imperial' && (weight < 50 || weight > 1400)) newErrors.weight = 'Please enter a valid weight';
-    if( unit === 'metric' && (weight < 22 || weight > 635)) newErrors.weight = 'Please enter a valid weight';
+    if (unit === 'imperial' && weight && (weight < 50 || weight > 1400)) newErrors.weight = 'Please enter a valid weight';
+    if( unit === 'metric' && weight && (weight < 22 || weight > 635)) newErrors.weight = 'Please enter a valid weight';
 
     if (!height) newErrors.height = 'Height is required';
-    if (unit === 'metric' && (height < 50 || height > 300)) newErrors.height = 'Please enter a valid height';
-    if (unit === 'imperial' && (height < 1.64 || height > 9.84)) newErrors.height = 'Please enter a valid height';
-    
+    if (unit === 'metric' && height && (height < 50 || height > 300)) newErrors.height = 'Please enter a valid height';
+    if (unit === 'imperial' && height && (height < 1.64 || height > 9.84)) newErrors.height = 'Please enter a valid height';
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -55,13 +57,16 @@ const UserInputs = () => {
         unit,
         primaryGoal,
         gender,
-        age,
-        weight,
-        height,
+        age: parseInt(age),
+        weight: parseFloat(weight),
+        height: parseFloat(height),
         activity
       };
       
+      localStorage.setItem('nutritionFormData', JSON.stringify(formData));
+      
       console.log('Form submitted with data:', formData);
+      navigate('/personal-macro', { state: formData });
     }
   };
 
