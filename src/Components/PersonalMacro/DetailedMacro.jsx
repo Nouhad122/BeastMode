@@ -7,6 +7,8 @@ import classes from './DetailedMacro.module.css';
 import NutritionBar from './NutritionBar';
 import MacroSwatch from './MacroSwatch';
 import MacroCard from './MacroCard';
+import GoalCard from './GoalCard';
+import InfoItem from './InfoItem';
 
 const DetailedMacro = () => {
   const navigate = useNavigate();
@@ -150,32 +152,17 @@ const DetailedMacro = () => {
         <div className={classes.alternativeGoals}>
           <h2>Alternative Calorie Goals</h2>
           <div className={classes.goalCards}>
-            <div className={classes.goalCard}>
-              <h3>Maintain Weight</h3>
-              <div className={classes.goalValue}>{nutritionData.calories.maintain} calories</div>
-            </div>
-            <div className={classes.goalCard}>
-              <h3>Lose Fat</h3>
-              <div className={classes.goalValue}>{nutritionData.calories.loseFat} calories</div>
-            </div>
-            <div className={classes.goalCard}>
-              <h3>Build Muscle</h3>
-              <div className={classes.goalValue}>{nutritionData.calories.buildMuscle} calories</div>
-            </div>
+            <GoalCard goal="Maintain Weight" energyAmount={nutritionData.calories.maintain}/>
+            <GoalCard goal="Lose Fat" energyAmount={nutritionData.calories.loseFat}/>
+            <GoalCard goal="Build Muscle" energyAmount={nutritionData.calories.buildMuscle}/>
           </div>
         </div>
 
         <div className={classes.infoSection}>
           <h2>Your Metabolism Information</h2>
           <div className={classes.infoGrid}>
-            <div className={classes.infoItem}>
-              <div className={classes.infoLabel}>Basal Metabolic Rate (BMR)</div>
-              <div className={classes.infoValue}>{nutritionData.bmr} calories</div>
-            </div>
-            <div className={classes.infoItem}>
-              <div className={classes.infoLabel}>Activity Level</div>
-              <div className={classes.infoValue}>{nutritionData.activityLevel}</div>
-            </div>
+            <InfoItem infoLabel="Basal Metabolic Rate (BMR)" infoValue={nutritionData.bmr}/>
+            <InfoItem infoLabel="Activity Level" infoValue={nutritionData.activityLevel}/>
           </div>
         </div>
       </div>
