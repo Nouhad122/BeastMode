@@ -1,0 +1,40 @@
+.actionButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-direction: column;
+}
+.backButton, .startButton, .deleteButton {
+    width: 100%;
+    justify-content: center;
+}
+.backButton{
+    background-color: var(--purple-color);
+    color: var(--white-font-color);
+    border: none;
+}
+
+.backButton:hover{
+    background-color: rgb(115, 1, 115);
+    color: var(--white-font-color);
+}
+
+.deleteButton {
+    border: none;
+}
+
+.deleteButton:hover {
+    background-color: var(--dark-red-color);
+    color: var(--white-font-color);
+}
+
+@media screen and (min-width: 825px) {
+    .actionButtons {
+        flex-direction: row;
+      }
+      
+    .backButton, .startButton, .deleteButton {
+        width: auto;
+    }
+}

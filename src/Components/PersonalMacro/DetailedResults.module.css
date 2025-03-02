@@ -1,0 +1,27 @@
+.detailedResults, .macroDetails, .goalCards, .infoGrid {
+    display: flex;
+    flex-direction: column;
+}
+.detailedResults {
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+.macroDetails, .goalCards {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.alternativeGoals, .infoSection {
+    margin-top: 1rem;
+}
+
+.infoGrid {
+    flex-wrap: wrap;
+    gap: 1rem;
+}  
+
+@media screen and (min-width: 825px) {
+    .macroDetails, .goalCards, .infoGrid{
+        flex-direction: row;
+      }
+}

@@ -1,131 +1,30 @@
 .container {
-    max-width: 45rem;
-    margin: 2rem auto;
-    padding: 1rem;
-    font-family: 'Arial', sans-serif;
-  }
-  .container h2{
-    margin-bottom: 1.2rem;
-    font-size: 1.3rem;
-  }
-  
-  .loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    font-size: 1.5rem;
-    color: #555;
-  }
-  .detailedResults {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .macroDetails {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
-  }
-
-  .alternativeGoals {
-    margin-top: 1rem;
-  }
-  
-  .goalCards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
-  }
-  .infoSection {
-    margin-top: 1rem;
-  } 
-  .infoGrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .actionButtons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 3rem;
-  }
-  
-  .backButton{
-    background-color: var(--purple-color);
-    color: var(--white-font-color);
-    border: none;
-  }
-  
-  .backButton:hover{
-    background-color: rgb(115, 1, 115);
-    color: var(--white-font-color);
-  }
-  
-  .deleteButton {
-    border: none;
-  }
-  
-  .deleteButton:hover {
-    background-color: var(--dark-red-color);
-    color: var(--white-font-color);
-  }
-  
-  .summary, .macroDetails, .goalCards, .infoGrid {
-    flex-direction: column;
-  }
-  
-  .macroCard, .goalCard, .infoItem {
-    min-width: unset;
-    width: 100%;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-  }
-  
-  .macroValue {
-    font-size: 1.5rem;
-  }
-  
-  .goalValue, .infoValue {
-    font-size: 1.2rem;
-  }
-  
-  .actionButtons {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  
-  .backButton, .startButton, .deleteButton {
-    width: 100%;
-    justify-content: center;
-  }
+  max-width: 45rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+.container h2{
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.5rem;
+  color: #555;
+}
   
   @media screen and (min-width: 825px) {
-    .container {
-      max-width: 1200px;
-      padding: 2rem;
-    }
+  .container {
+    max-width: 100%;
+    padding: 2rem;
+  }
+  
+  .chartContainer {
+    height: 40px;
+  }
     
-    .summary, .macroDetails, .goalCards, .infoGrid {
-      flex-direction: row;
-    }
-    
-    .chartContainer {
-      height: 40px;
-    }
-    
-    .actionButtons {
-      flex-direction: row;
-    }
-    
-    .backButton, .startButton, .deleteButton {
-      width: auto;
-    }
   }
