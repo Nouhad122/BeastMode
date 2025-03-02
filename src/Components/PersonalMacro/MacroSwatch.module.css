@@ -4,20 +4,20 @@
   }
   
   .proteinSwatch, .carbSwatch, .fatSwatch {
-    width: 20px;
-    height: 20px;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-right: 8px;
     border-radius: 4px;
   }
   
   .proteinSwatch {
-    background-color: #e74c3c;
+    background-color: var(--purple-color);
   }
   
   .carbSwatch {
-    background-color: #2ecc71;
+    background-color: var(--green-color);
   }
   
   .fatSwatch {
-    background-color: #f39c12;
+    background-color: var(--orange-color);
   }
