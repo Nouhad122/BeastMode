@@ -64,8 +64,6 @@ const UserInputs = () => {
       };
       
       localStorage.setItem('nutritionFormData', JSON.stringify(formData));
-      
-      console.log('Form submitted with data:', formData);
       navigate('/personal-macro', { state: formData });
     }
   };

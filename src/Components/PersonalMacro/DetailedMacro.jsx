@@ -4,6 +4,9 @@ import { calculateNutrition } from '../../util/nutritionCalculator';
 import Button from '../sharedComps/Button';
 import { FaArrowLeft, FaCalculator, FaTrash } from 'react-icons/fa';
 import classes from './DetailedMacro.module.css';
+import NutritionBar from './NutritionBar';
+import MacroSwatch from './MacroSwatch';
+import MacroCard from './MacroCard';
 
 const DetailedMacro = () => {
   const navigate = useNavigate();
@@ -78,9 +81,7 @@ const DetailedMacro = () => {
   }
 
   return (
-    <div className={classes.container}>
-      <h1 className={classes.title}>Your Personal Nutrition Plan</h1>
-      
+    <div className={classes.container}>  
       <div className={classes.summary}>
         <div className={classes.goalSection}>
           <h2>Your Goal: {nutritionData.goal.replace('_', ' ').toUpperCase()}</h2>
@@ -92,38 +93,32 @@ const DetailedMacro = () => {
         <div className={classes.macroChart}>
           <h2>Macronutrient Breakdown</h2>
           <div className={classes.chartContainer}>
-            <div 
-              className={classes.proteinBar} 
-              style={{ width: `${nutritionData.macros.protein.percentage}%` }}
-            >
-              {nutritionData.macros.protein.percentage}%
-            </div>
-            <div 
-              className={classes.carbBar} 
-              style={{ width: `${nutritionData.macros.carbs.percentage}%` }}
-            >
-              {nutritionData.macros.carbs.percentage}%
-            </div>
-            <div 
-              className={classes.fatBar} 
-              style={{ width: `${nutritionData.macros.fat.percentage}%` }}
-            >
-              {nutritionData.macros.fat.percentage}%
-            </div>
+            <NutritionBar
+             macronutrient={nutritionData.macros.protein.percentage} 
+             className='proteinBar'
+            />
+            <NutritionBar
+             macronutrient={nutritionData.macros.carbs.percentage} 
+             className='carbBar'
+            />
+            <NutritionBar
+             macronutrient={nutritionData.macros.fat.percentage} 
+             className='fatBar'
+            />
           </div>
           <div className={classes.legend}>
-            <div className={classes.legendItem}>
-              <div className={classes.proteinSwatch}></div>
-              <span>Protein</span>
-            </div>
-            <div className={classes.legendItem}>
-              <div className={classes.carbSwatch}></div>
-              <span>Carbs</span>
-            </div>
-            <div className={classes.legendItem}>
-              <div className={classes.fatSwatch}></div>
-              <span>Fat</span>
-            </div>
+            <MacroSwatch
+             className='proteinSwatch' 
+             swatchMacro='Protein'
+            />
+            <MacroSwatch
+             className='carbSwatch' 
+             swatchMacro='Carbs'
+            />
+            <MacroSwatch
+             className='fatSwatch' 
+             swatchMacro='Fat'
+            />
           </div>
         </div>
       </div>
@@ -131,29 +126,25 @@ const DetailedMacro = () => {
       <div className={classes.detailedResults}>
         <div className={classes.macroDetails}>
           <h2>Daily Macro Targets</h2>
-          <div className={classes.macroCard}>
-            <div className={classes.macroHeader}>Protein</div>
-            <div className={classes.macroValue}>{nutritionData.macros.protein.grams}g</div>
-            <div className={classes.macroPercent}>{nutritionData.macros.protein.percentage}%</div>
-          </div>
-          
-          <div className={classes.macroCard}>
-            <div className={classes.macroHeader}>Carbohydrates</div>
-            <div className={classes.macroValue}>{nutritionData.macros.carbs.grams}g</div>
-            <div className={classes.macroPercent}>{nutritionData.macros.carbs.percentage}%</div>
-            <div className={classes.macroSubInfo}>
-              <span>Limit Sugar to: {nutritionData.macros.carbs.sugar.maxGrams}g</span>
-            </div>
-          </div>
-          
-          <div className={classes.macroCard}>
-            <div className={classes.macroHeader}>Fat</div>
-            <div className={classes.macroValue}>{nutritionData.macros.fat.grams}g</div>
-            <div className={classes.macroPercent}>{nutritionData.macros.fat.percentage}%</div>
-            <div className={classes.macroSubInfo}>
-              <span>Limit Saturated Fat to: {nutritionData.macros.fat.saturatedFat.maxGrams}g</span>
-            </div>
-          </div>
+          <MacroCard
+           macronutrient="Protein" 
+           macroValue={nutritionData.macros.protein.grams} 
+           macroPercent={nutritionData.macros.protein.percentage}
+          />
+          <MacroCard
+           macronutrient="Carbohydrates" 
+           macroValue={nutritionData.macros.carbs.grams} 
+           macroPercent={nutritionData.macros.carbs.percentage}
+           subInfo="Sugar"
+           macroSubInfo={nutritionData.macros.carbs.sugar.maxGrams}
+          />
+          <MacroCard
+           macronutrient="Fat" 
+           macroValue={nutritionData.macros.fat.grams} 
+           macroPercent={nutritionData.macros.fat.percentage}
+           subInfo="Saturated Fat"
+           macroSubInfo={nutritionData.macros.fat.saturatedFat.maxGrams}
+          />
         </div>
 
         <div className={classes.alternativeGoals}>

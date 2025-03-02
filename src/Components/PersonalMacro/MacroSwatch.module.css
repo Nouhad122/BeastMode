@@ -1,0 +1,23 @@
+.legendItem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .proteinSwatch, .carbSwatch, .fatSwatch {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+  
+  .proteinSwatch {
+    background-color: #e74c3c;
+  }
+  
+  .carbSwatch {
+    background-color: #2ecc71;
+  }
+  
+  .fatSwatch {
+    background-color: #f39c12;
+  }

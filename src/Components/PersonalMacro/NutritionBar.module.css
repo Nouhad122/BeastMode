@@ -1,0 +1,19 @@
+.proteinBar, .carbBar, .fatBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.proteinBar {
+    background-color: #e74c3c;
+  }
+  
+  .carbBar {
+    background-color: #2ecc71;
+  }
+  
+  .fatBar {
+    background-color: #f39c12;
+  }
