@@ -4,7 +4,6 @@ import SearchInput from '../Components/Home/SearchInput'
 import { useQuery } from '@tanstack/react-query';
 import { exercisesOptions, fetchData } from '../util/http';
 import BodyParts from '../Components/Home/BodyParts';
-import ScheduleModal from '../Components/Modals/scheduleModal';
 
 const ExercisesPage = () => {
   const [selectedBodyPart, setSelectedBodyPart] = useState('all');

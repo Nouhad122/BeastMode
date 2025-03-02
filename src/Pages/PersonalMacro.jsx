@@ -7,8 +7,9 @@ const PersonalMacro = () => {
     <section>
       <Title
        title="Your Personal Nutrition Plan" 
-       subText="We’ve crunched the numbers, and evaluated the data and inspected your info."/>
-       
+       subText="We crunch the numbers, and evaluate the data and inspect your info."
+      />
+
       <DetailedMacro />
     </section>
     

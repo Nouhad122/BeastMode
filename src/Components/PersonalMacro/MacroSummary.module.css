@@ -1,0 +1,42 @@
+.summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+  }
+  
+  .goalSection {
+    flex: 1;
+  }
+  
+  .calorieBox {
+    background-color: var(--light-red-color);
+    color: var(--white-font-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calorieBox h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  
+  .macroChart {
+    flex: 1;
+  }
+  
+  .chartContainer {
+    height: 3rem;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }

@@ -1,0 +1,29 @@
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-black-color);
+}
+.emptyState p {
+    font-size: 1.2rem;
+    color: var(--silver-color);
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+.startButton {
+    background-color: var(--purple-color);
+    color: var(--white-font-color);
+    border: none;
+}
+.startButton:hover {
+    background-color: rgb(115, 1, 115);
+    color: var(--white-font-color);
+}
