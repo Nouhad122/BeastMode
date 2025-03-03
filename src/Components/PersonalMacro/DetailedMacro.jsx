@@ -5,14 +5,14 @@ import EmptyData from './EmptyData';
 import MacroSummary from './MacroSummary';
 import DetailedResults from './DetailedResults';
 import ActionButtons from './ActionButtons';
+import LoadingText from '../Loader/LoadingText';
 
 const DetailedMacro = () => {
   const {nutritionData, loading} = useNutritionData();
 
   if (loading) {
-    return <div className={classes.loading}>Loading your personalized nutrition plan...</div>;
+    return <LoadingText text="Calculating your personalized nutrition plan..."/>;
   }
-
 
   return (
     <div className={classes.container}>

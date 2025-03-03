@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import Details from '../Components/ExerciseDetail/Details';
 import ExerciseVideos from '../Components/ExerciseDetail/ExerciseVideos';
 import SimilarTarget from '../Components/ExerciseDetail/SimilarTarget';
+import Loader from '../Components/Loader/Loader';
 
 const ExerciseDetail = () => {
   const { id } = useParams();
@@ -49,7 +50,7 @@ const ExerciseDetail = () => {
   });
 
   if (isLoading || isLoadingVideos || isLoadingTarget || isLoadingEquipment) {
-    return <p>Loading...</p>;
+    return <Loader />;
   }
 
   if (isError) {

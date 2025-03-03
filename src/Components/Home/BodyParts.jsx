@@ -4,6 +4,7 @@ import classes from './BodyParts.module.css'
 import { exercisesOptions, fetchData } from '../../util/http'
 import { GiMuscularTorso } from "react-icons/gi";
 import SliderComp from '../sharedComps/Slider.jsx';
+import LoadingText from '../Loader/LoadingText.jsx';
 
 const BodyParts = ({ selectedBodyPart, setSelectedBodyPart, refetch}) => {
     const { data, isPending, isError, error } = useQuery({
@@ -17,7 +18,7 @@ const BodyParts = ({ selectedBodyPart, setSelectedBodyPart, refetch}) => {
     })
 
     if(isPending){
-      return <p>Fetching body part list...</p>
+      return <LoadingText text="Please wait. This may take a few seconds..."/>
     }
 
     if(isError){

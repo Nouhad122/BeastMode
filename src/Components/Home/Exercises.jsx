@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ExerciseCard from './ExerciseCard';
 import usePagination from '../../hooks/usePagination';
 import Pagination from '../sharedComps/Pagination';
+import Loader from '../Loader/Loader';
 
 const Exercises = ({ searchTerm, selectedBodyPart, exercises, isFetching, isError, error }) => { 
   const itemsPerPage = 24;
@@ -25,7 +26,7 @@ const Exercises = ({ searchTerm, selectedBodyPart, exercises, isFetching, isErro
   });
 
   if (isFetching) {
-    return <p>Fetching exercises...</p>;
+    return <Loader />;
   }
 
   if (isError) {

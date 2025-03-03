@@ -6,7 +6,7 @@ const PersonalMacro = () => {
   return (
     <section>
       <Title
-       title="Your Personal Nutrition Plan" 
+       title="Personal Nutrition Plan" 
        subText="We crunch the numbers, and evaluate the data and inspect your info."
       />
 
