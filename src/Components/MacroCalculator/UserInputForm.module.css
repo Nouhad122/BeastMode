@@ -1,0 +1,20 @@
+.header{
+    margin: 3rem 0;
+    width: fit-content;
+    border-bottom: solid 3px var(--light-red-color);
+    padding: .3rem 0;
+    font-weight: 400;
+  }
+  
+  .flexText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  @media screen and (min-width: 825px){
+    .flexText{
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }

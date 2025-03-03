@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Exercises from '../Components/Home/Exercises'
-import SearchInput from '../Components/Home/SearchInput'
+import React, { useState } from 'react';
+import Exercises from '../Components/Exercises/Exercises';
+import SearchInput from '../Components/Exercises/SearchInput';
 import { useQuery } from '@tanstack/react-query';
 import { exercisesOptions, fetchData } from '../util/http';
-import BodyParts from '../Components/Home/BodyParts';
+import BodyParts from '../Components/Exercises/BodyParts';
 
 const ExercisesPage = () => {
   const [selectedBodyPart, setSelectedBodyPart] = useState('all');

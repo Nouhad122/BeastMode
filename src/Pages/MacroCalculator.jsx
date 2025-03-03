@@ -1,5 +1,5 @@
 import React from 'react';
-import UserInputs from '../Components/MacroCalculator/UserInputs';
+import UserInputForm from '../Components/MacroCalculator/UserInputForm';
 import Title from '../Components/sharedComps/Title';
 
 const MacroCalculator = () => {
@@ -11,7 +11,7 @@ const MacroCalculator = () => {
            for your flexible dieting goals."
       />
 
-      <UserInputs />
+      <UserInputForm />
     </section>
   )
 }

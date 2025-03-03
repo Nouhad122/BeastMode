@@ -8,7 +8,8 @@ const MySchedule = () => {
      title="My Schedule"
      subText="Plan your success — organize your meals and workouts for consistent results."
     />
-       <Schedule />
+    
+    <Schedule />
     </section>
   )
 }

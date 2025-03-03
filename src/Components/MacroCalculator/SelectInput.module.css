@@ -1,0 +1,35 @@
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .mainLabel{
+    font-size: 1.3rem;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 0.75rem;
+    border: solid 2px transparent;
+    background-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .select:focus {
+    border: solid 2px var(--light-red-color);
+    outline: none;
+  }
+  
+  .helpBlock {
+    font-size: .85rem;
+    color: var(--silver-color);
+  }
+  
+  .error{
+    color: var(--light-red-color);
+    font-size: 1.1rem;
+  }

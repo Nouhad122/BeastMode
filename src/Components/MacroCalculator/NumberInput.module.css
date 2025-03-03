@@ -1,0 +1,32 @@
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .mainLabel{
+    font-size: 1.3rem;
+  }
+  
+  input[type="number"]{
+    padding: 1rem 0.5rem;
+    outline: none;
+    border: solid 2px transparent;
+    font-size: 1.1rem;
+  }
+  
+  input[type="number"]:focus{
+    border: solid 2px var(--light-red-color);
+  }
+  
+  .error{
+    color: var(--light-red-color);
+    font-size: 1.1rem;
+  }
+  
+  @media screen and (min-width: 825px){
+    input[type="number"]{
+       width: 31vw;
+    }
+  }

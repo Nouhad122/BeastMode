@@ -3,6 +3,7 @@ import ExerciseCard from './ExerciseCard';
 import usePagination from '../../hooks/usePagination';
 import Pagination from '../sharedComps/Pagination';
 import Loader from '../Loader/Loader';
+import EmptyParagraph from '../sharedComps/EmptyParagraph';
 
 const Exercises = ({ searchTerm, selectedBodyPart, exercises, isFetching, isError, error }) => { 
   const itemsPerPage = 24;
@@ -34,7 +35,7 @@ const Exercises = ({ searchTerm, selectedBodyPart, exercises, isFetching, isErro
   }
 
   if (targetedExercises && targetedExercises.length === 0) {
-    return <p>Your search doesn't match any exercise for the chosen body part</p>;
+    return <EmptyParagraph>Your search doesn't match any exercise for the chosen body part</EmptyParagraph>;
   }
 
   return (

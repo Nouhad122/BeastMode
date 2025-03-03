@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import React from 'react'
 import classes from './BodyParts.module.css'
 import { exercisesOptions, fetchData } from '../../util/http'
-import { GiMuscularTorso } from "react-icons/gi";
+import { CgGym } from "react-icons/cg";
 import SliderComp from '../sharedComps/Slider.jsx';
 import LoadingText from '../Loader/LoadingText.jsx';
 
@@ -45,8 +45,7 @@ const BodyParts = ({ selectedBodyPart, setSelectedBodyPart, refetch}) => {
                ${selectedBodyPart === bodyPart ? `${classes['active']}` : ''}`}
                onClick={() => handleBodyPartSelection(bodyPart)}
               >
-                <GiMuscularTorso className={classes['bodyPart-icon']}/>
-
+                <CgGym className={classes['bodyPart-icon']}/>
                 <h3 className={classes['bodyPart-header']}>{bodyPart}</h3>
                 
               </div>

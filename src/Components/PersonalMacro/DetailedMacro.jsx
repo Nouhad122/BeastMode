@@ -16,8 +16,8 @@ const DetailedMacro = () => {
 
   return (
     <div className={classes.container}>
-      {!nutritionData && <EmptyData />}
-      {nutritionData && 
+      {nutritionData === null && <EmptyData />}
+      {nutritionData !== null && 
       <>
         <MacroSummary nutritionData={nutritionData}/>
 

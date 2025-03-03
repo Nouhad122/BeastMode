@@ -1,8 +1,10 @@
 import {useState, useEffect} from 'react'
 import { useLocation } from 'react-router-dom';
 import { calculateNutrition } from '../util/nutritionCalculator';
+import { useNavigate } from 'react-router-dom';
 const useNutritionData = () => {
-    const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [nutritionData, setNutritionData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -41,6 +43,7 @@ const useNutritionData = () => {
   const clearNutritionData = () => {
     localStorage.removeItem('nutritionFormData');
     setNutritionData(null);
+    navigate('/macro-calculator');
   };
 
   return (

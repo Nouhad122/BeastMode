@@ -1,0 +1,24 @@
+.formBtnsWrapper{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .submitBtn{
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.2rem !important;
+  }
+  
+  .clearBtn{
+    background-color: var(--purple-color);
+    font-size: 1.2rem !important;
+    border: solid 2px transparent;
+  }
+  
+  .clearBtn:hover{
+    border: solid 2px var(--purple-color);
+    color: var(--purple-color);
+  }

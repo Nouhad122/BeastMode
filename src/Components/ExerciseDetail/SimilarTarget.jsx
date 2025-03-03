@@ -1,5 +1,5 @@
 import React from 'react'
-import ExerciseCard from '../Home/ExerciseCard';
+import ExerciseCard from '../Exercises/ExerciseCard';
 import SliderComp from '../sharedComps/Slider';
 import classes from './ExerciseVideos.module.css';
 

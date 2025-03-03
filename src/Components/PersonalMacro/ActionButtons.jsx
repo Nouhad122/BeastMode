@@ -10,7 +10,7 @@ const ActionButtons = () => {
   const { clearNutritionData } = useNutritionData();
 
   const handleGoBack = () => {
-    navigate('/');
+    navigate('/macro-calculator');
   };
   return (
     <div className={classes.actionButtons}>
