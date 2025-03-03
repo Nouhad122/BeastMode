@@ -1,0 +1,97 @@
+  .container {
+    margin: 3rem auto;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .benefitCard {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: 25rem;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .benefitImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefitCard:hover .benefitImage {
+    transform: scale(1.05);
+  }
+  
+  .textContent {
+    padding: 1.5rem;
+  }
+  
+  .benefitTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .benefitDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .ctaContainer {
+    text-align: center;
+  }
+  
+  .ctaText {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--silver-color);
+  }
+  
+  @media screen and (min-width: 825px) {
+    
+    .benefitCard {
+      flex-direction: row;
+      min-height: 18rem;
+    }
+    
+    .reversed {
+      flex-direction: row-reverse;
+    }
+    
+    .imageContainer {
+      width: 50%;
+      height: auto;
+    }
+    
+    .textContent {
+      width: 50%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .ctaContainer {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+    
+    .ctaText {
+      margin-bottom: 1.2rem;
+    }
+    
+  }

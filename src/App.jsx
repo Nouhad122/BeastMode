@@ -7,6 +7,7 @@ import Exercises from './Pages/ExercisesPage';
 import MySchedule from './Pages/MySchedule';
 import MacroCalculator from './Pages/MacroCalculator';
 import PersonalMacro from './Pages/PersonalMacro';
+import NotFound from './Pages/NotFound';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,7 +17,8 @@ function App() {
         {path: '/exercises/:name/:id', element: <ExerciseDetail />},
         {path: '/my-schedule', element: <MySchedule />},
         {path: '/macro-calculator', element: <MacroCalculator />},
-        {path: '/personal-macro', element: <PersonalMacro />}
+        {path: '/personal-macro', element: <PersonalMacro />},
+        {path: '*', element: <NotFound />}
       ]
     }
   ]);

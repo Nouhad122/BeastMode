@@ -1,0 +1,87 @@
+/* SimpleFooter.module.css */
+
+.footer {
+    background-color: var(--light-black-color);
+    padding: 3rem 0 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--light-red-color);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .logoSection {
+    margin-bottom: 1rem;
+  }
+  
+  .logo {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  .mottoSection {
+    max-width: 500px;
+  }
+  
+  .motto {
+    font-style: italic;
+    color: var(--white-font-color);
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  .decorativeLine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .line {
+    height: 1px;
+    width: 80px;
+    background-color: var(--light-red-color, #ff5252);
+    opacity: 0.6;
+  }
+  
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--light-red-color, #ff5252);
+    margin: 0 10px;
+  }
+  
+  .copyright {
+    color: #a6a6a6;
+    font-size: 0.9rem;
+  }
+  
+  /* Media Queries */
+  @media screen and (min-width: 825px) {
+    .footerContent {
+      flex-direction: row;
+      justify-content: center;
+      gap: 3rem;
+    }
+    
+    .logoSection {
+      margin-bottom: 0;
+    }
+    
+    .mottoSection {
+      text-align: left;
+    }
+  }

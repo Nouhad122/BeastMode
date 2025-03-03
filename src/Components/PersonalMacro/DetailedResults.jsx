@@ -3,10 +3,14 @@ import classes from './DetailedResults.module.css';
 import MacroCard from './MacroCard';
 import GoalCard from './GoalCard';
 import InfoItem from './InfoItem';
+import useNutritionData from '../../hooks/useNutritionData';
 
-const DetailedResults = ({ nutritionData }) => {
+const DetailedResults = () => {
+  const { nutritionData } = useNutritionData();
   return (
-    <div className={classes.detailedResults}>
+    <>
+    {nutritionData && (
+      <div className={classes.detailedResults}>
           <div className={classes.macroDetails}>
             <h2>Daily Macro Targets</h2>
             <MacroCard
@@ -46,7 +50,10 @@ const DetailedResults = ({ nutritionData }) => {
               <InfoItem infoLabel="Activity Level" infoValue={nutritionData.activityLevel}/>
             </div>
           </div>
-        </div>
+    </div>
+    )}
+    </>
+    
   )
 }
 

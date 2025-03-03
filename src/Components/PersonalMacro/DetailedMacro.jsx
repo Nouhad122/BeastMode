@@ -6,6 +6,7 @@ import MacroSummary from './MacroSummary';
 import DetailedResults from './DetailedResults';
 import ActionButtons from './ActionButtons';
 import LoadingText from '../Loader/LoadingText';
+import Title from '../sharedComps/Title';
 
 const DetailedMacro = () => {
   const {nutritionData, loading} = useNutritionData();
@@ -15,18 +16,25 @@ const DetailedMacro = () => {
   }
 
   return (
+    <section>
+    <Title
+      title="Personal Nutrition Plan" 
+      subText="We crunch the numbers, and evaluate the data and inspect your info."
+    />
+
     <div className={classes.container}>
       {nutritionData === null && <EmptyData />}
       {nutritionData !== null && 
       <>
-        <MacroSummary nutritionData={nutritionData}/>
+        <MacroSummary />
 
-        <DetailedResults nutritionData={nutritionData}/>
+        <DetailedResults />
 
         <ActionButtons />
       </>
       }  
     </div>
+    </section>
   );
 };
 

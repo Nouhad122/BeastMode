@@ -1,13 +1,11 @@
-import React from 'react'
-import ImageBox from '../Components/Home/ImageBox'
-
+import React from 'react';
+import ImageBox from '../Components/Home/ImageBox';
 
 const Home = () => {
 
   return (
     <>
       <ImageBox />
-
     </>
   )
 }
