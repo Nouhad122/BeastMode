@@ -24,7 +24,7 @@ const ExercisesPage = () => {
       staleTime: 1000 * 60 * 60
   });
   return (
-    <section>
+    <section style={{minHeight: '100vh'}}>
         <SearchInput
          setSearchTerm={setSearchTerm}
          refetch={refetch}

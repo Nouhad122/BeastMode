@@ -11,7 +11,7 @@ const ExerciseCard = ({ day, ...exercise }) => {
   return (
     <>
     <div className={classes['exercise-card']}>
-      <Link to={`/exercises/${exercise.name}/${exercise.id}`} className={classes['card-link']}>
+      <Link to={`/exercises/${encodeURIComponent(exercise.name)}/${exercise.id}`} className={classes['card-link']}>
         <img src={exercise.gifUrl} alt={exercise.name}/>
         <h5 className={classes['sub-headings']}>
           <span>{exercise.bodyPart}</span>
