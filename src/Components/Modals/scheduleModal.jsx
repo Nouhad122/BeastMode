@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import classes from './Modal.module.css';
 import { createPortal } from 'react-dom';
 import { BsPlusCircleFill } from "react-icons/bs";
@@ -6,21 +6,19 @@ import { useDispatch } from 'react-redux';
 import { scheduleActions } from '../../store/schedule-slice';
 import DaysOfWeek from '../sharedComps/DaysOfWeek';
 import Modal from './Modal';
+import ModalContext from '../../Context/ModalContext';
 
-const ScheduleModal = ({ onClose, exercise }) => {
-    useEffect(() =>{
-        document.body.style.overflow = "hidden";
-        return () => document.body.style.overflow = "unset";
-    },[]);
+const ScheduleModal = ({ exercise }) => {
+  const { hideSchedule } = useContext(ModalContext);
 
-    const dispatch = useDispatch();
-    const addExerciseToSchedule = (day) =>{
-      dispatch(scheduleActions.addToSchedule({day, newExercise: exercise}));
-      onClose();
-    }
+  const dispatch = useDispatch();
+  const addExerciseToSchedule = (day) =>{
+    dispatch(scheduleActions.addToSchedule({day, newExercise: exercise}));
+    hideSchedule();
+  }
 
   return createPortal(
-    <Modal header="Select a Day to Schedule This Exercise" onClose={onClose}>
+    <Modal header="Select a Day to Schedule This Exercise" onClose={hideSchedule}>
       <ul className={classes['day-list']}>
         <DaysOfWeek>
           {

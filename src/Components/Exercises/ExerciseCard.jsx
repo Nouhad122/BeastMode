@@ -6,7 +6,7 @@ import ScheduleModal from '../Modals/scheduleModal';
 import ModalContext from '../../Context/ModalContext';
 
 const ExerciseCard = ({ day, ...exercise }) => {
-  const { scheduleIsOpen, showSchedule, hideSchedule, selectedExercise } = useContext(ModalContext);
+  const { scheduleIsOpen, showSchedule, selectedExercise } = useContext(ModalContext);
 
   return (
     <>
@@ -33,7 +33,7 @@ const ExerciseCard = ({ day, ...exercise }) => {
     </div>
 
     {scheduleIsOpen && selectedExercise?.id === exercise.id &&(
-      <ScheduleModal onClose={hideSchedule} exercise={selectedExercise}/>
+      <ScheduleModal exercise={selectedExercise}/>
     )}
     </>
   )

@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.039);
+    background: rgba(0, 0, 0, 0.728);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,9 @@
     margin-bottom: 1.5rem;
     color: var(--white-font-color);
   }
-  
+  .additional-padding{
+    padding: 3rem 0;
+  }
   .day-list {
     list-style: none;
     padding: 0;
@@ -57,6 +59,17 @@
     transform: translateY(-50%);
     color: var(--light-red-color);
     font-size: 1.5rem !important;
+  }
+  .green-button{
+    background-color: var(--green-color);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-right: 2rem;
+    border: solid 2px var(--green-color);
+    margin-bottom: 1rem;
+  }
+  .green-button:hover{
+    color: var(--green-color);
   }
   
   
