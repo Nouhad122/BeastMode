@@ -5,7 +5,7 @@ const InfoItem = ({ infoLabel, infoValue }) => {
   return (
     <div className={classes.infoItem}>
         <div className={classes.infoLabel}>{infoLabel}</div>
-        <div className={classes.infoValue}>{infoValue} calories</div>
+        <div className={classes.infoValue}>{infoValue}</div>
     </div>
   )
 }

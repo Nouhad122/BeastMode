@@ -1,3 +1,7 @@
+  .macro-benefit-section{
+    margin-top: 3rem;
+  }
+
   .container {
     margin: 3rem auto;
   }
@@ -12,7 +16,7 @@
   .benefitCard {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--light-black-color);
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     height: 25rem;
@@ -42,13 +46,13 @@
   .benefitTitle {
     font-size: 1.4rem;
     margin-bottom: 0.75rem;
-    color: #333;
+    color: var(--white-font-color);
   }
   
   .benefitDescription {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--silver-color);
   }
   
   .ctaContainer {

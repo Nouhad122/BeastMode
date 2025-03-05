@@ -34,7 +34,7 @@ const MacroBenefit = () => {
   ];
 
   return (
-    <section>
+    <section className={classes['macro-benefit-section']}>
       <Title 
        title="Why Tracking Macro?"
       />

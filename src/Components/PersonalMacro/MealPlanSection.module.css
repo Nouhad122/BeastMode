@@ -10,38 +10,6 @@
     margin-top: 1rem;
   }
   
-  .mealCard {
-    flex: 1;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: var(--light-black-color);
-  }
-  
-  .mealCard h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  .calories {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--silver-color);
-  }
-  
-  .protein {
-    color: var(--purple-color);
-  }
-  
-  .carbs {
-    color: var(--green-color);
-  }
-  
-  .fat {
-    color: var(--orange-color);
-  }
-  
   @media screen and (min-width: 825px) {
     .mealCards {
       flex-direction: row;

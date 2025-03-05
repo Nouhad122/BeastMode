@@ -1,0 +1,82 @@
+.calendarSection {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .calendarContainer {
+    background-color: var(--light-black-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dayLabels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .dayLabel {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: var(--white-font-color);
+  }
+  
+  .workoutBoxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  
+  .workoutBox {
+    flex: 1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--white-font-color);
+  }
+  
+  .strength {
+    background-color: var(--light-red-color);
+  }
+  
+  .cardio {
+    background-color: var(--green-color);
+  }
+  
+  .rest {
+    background-color: var(--dark-black-color);
+  }
+  
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
+  .legendItem {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .legendSwatch {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 3px;
+  }
+  
+  @media screen and (min-width: 825px) {
+    .legend {
+      justify-content: flex-start;
+    }
+  }

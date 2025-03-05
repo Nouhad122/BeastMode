@@ -1,5 +1,3 @@
-/* SimpleFooter.module.css */
-
 .footer {
     background-color: var(--light-black-color);
     padding: 3rem 0 2rem;
@@ -9,9 +7,10 @@
   
   .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 62rem;
     margin: 0 auto;
     text-align: center;
+    background-color: red;
   }
   
   .footerContent {

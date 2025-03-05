@@ -47,7 +47,7 @@ const DetailedResults = () => {
             <h2>Your Metabolism Information</h2>
             <div className={classes.infoGrid}>
               <InfoItem infoLabel="Basal Metabolic Rate (BMR)" infoValue={nutritionData.bmr}/>
-              <InfoItem infoLabel="Activity Level" infoValue={nutritionData.activityLevel}/>
+              <InfoItem infoLabel="Activity Level" infoValue={`${nutritionData.activityLevel} calories`}/>
             </div>
           </div>
     </div>
