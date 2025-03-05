@@ -62,7 +62,7 @@ const MacroBenefit = () => {
             Your body has unique nutritional needs based on your age, weight, height, activity level, and goals.
             Our calculator helps you find your perfect macro balance.
           </p>
-          <Link to={'macro-calculator'}>
+          <Link to={'macro-calculator'} className={classes.benefitLink}>
             <Button>
               Calculate Your Macros Now
             </Button>

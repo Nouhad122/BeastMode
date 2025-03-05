@@ -8,7 +8,16 @@ const calculateNutrition = (formData) => {
   
   if (unit === 'imperial') {
     weightKg = weight * 0.453592; // Standard lbs to kg conversion factor
-    heightCm = height * 2.54; // Standard inches to cm conversion factor
+    
+    // Advanced height conversion handling for various input formats
+    // Accommodates both total inches and decimal feet notation
+    if (height < 10) {
+      // Height provided in decimal feet format (e.g., 5.8 feet)
+      heightCm = height * 30.48; 
+    } else {
+      // Height provided in total inches (e.g., 70 inches)
+      heightCm = height * 2.54;
+    }
   }
   
   // Implementing Mifflin-St Jeor equation (most accurate BMR formula based on meta-analysis)

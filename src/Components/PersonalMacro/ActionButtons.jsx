@@ -5,10 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaTrash } from 'react-icons/fa';
 import ModalContext from '../../Context/ModalContext';
 import InsuranceModal from '../Modals/InsuranceModal';
+import useNutritionData from '../../hooks/useNutritionData';
 
 const ActionButtons = () => {
   const navigate = useNavigate();
-  const { insuranceIsOpen, showInsurance } = useContext(ModalContext);
+  const { insuranceIsOpen, showInsurance, hideInsurance } = useContext(ModalContext);
+  const { clearNutritionData } = useNutritionData();
+  
+  const handleYesButton = () =>{
+    hideInsurance();
+    clearNutritionData();
+  }
 
   const handleGoBack = () => {
     navigate('/macro-calculator');
@@ -31,7 +38,10 @@ const ActionButtons = () => {
           </Button>
       </div>
 
-      {insuranceIsOpen && <InsuranceModal />}
+      {insuranceIsOpen && 
+      <InsuranceModal 
+       text="Are You Sure You Want to Delete Your Plan?" 
+       action={handleYesButton}/>}
     </>
     
   )

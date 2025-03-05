@@ -29,7 +29,7 @@
     position: absolute;
     top: -100vh;
     left: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background-color: var(--light-black-color);
     list-style: none;
