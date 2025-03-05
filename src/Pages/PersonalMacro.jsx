@@ -1,17 +1,17 @@
 import React from 'react';
 import classes from './PersonalMacro.module.css';
 import useNutritionData from '../hooks/useNutritionData';
-import EmptyData from '../Components/PersonalMacro/EmptyData';
-import MacroSummary from '../Components/PersonalMacro/MacroSummary';
-import DetailedResults from '../Components/PersonalMacro/DetailedResults';
-import MealPlanSection from '../Components/PersonalMacro/MealPlanSection';
-import MicronutrientSection from '../Components/PersonalMacro/MicronutrientSection';
-import WorkoutCalendar from '../Components/PersonalMacro/WorkoutCalendar';
-import FoodRecommendations from '../Components/PersonalMacro/FoodRecommendations';
-import ResultsTimeline from '../Components/PersonalMacro/ResultsTimeline';
-import ActionButtons from '../Components/PersonalMacro/ActionButtons';
-import LoadingText from '../Components/Loader/LoadingText';
-import Title from '../Components/sharedComps/Title';
+import EmptyData from '../Components/PersonalMacro/EmptyData.jsx';
+import MacroSummary from '../Components/PersonalMacro/MacroSummary.jsx';
+import DetailedResults from '../Components/PersonalMacro/DetailedResults.jsx';
+import MealPlanSection from '../Components/PersonalMacro/MealPlanSection.jsx';
+import MicronutrientSection from '../Components/PersonalMacro/MicronutrientSection.jsx';
+import WorkoutCalendar from '../Components/PersonalMacro/WorkoutCalendar.jsx';
+import FoodRecommendations from '../Components/PersonalMacro/FoodRecommendations.jsx';
+import ResultsTimeline from '../Components/PersonalMacro/ResultsTimeline.jsx';
+import ActionButtons from '../Components/PersonalMacro/ActionButtons.jsx';
+import LoadingText from '../Components/Loader/LoadingText.jsx';
+import Title from '../Components/sharedComps/Title.jsx';
 
 const PersonalMacro = () => {
   const {nutritionData, loading} = useNutritionData();
