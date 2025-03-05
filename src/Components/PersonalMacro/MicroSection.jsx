@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './MicronutrientSection.module.css';
+import classes from './MicroSection.module.css';
 import useNutritionData from '../../hooks/useNutritionData';
 import InfoItem from './InfoItem';
 
-const MicronutrientSection = () => {
+const MicroSection = () => {
   const { nutritionData } = useNutritionData();
 
   // Ensure we have nutrition data before rendering
@@ -26,4 +26,4 @@ const MicronutrientSection = () => {
   );
 };
 
-export default MicronutrientSection;
+export default MicroSection;
