@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 
 const usePagination = ({ items, itemsPerPage, currentPage, setCurrentPage }) => {
   const offset = currentPage * itemsPerPage;
