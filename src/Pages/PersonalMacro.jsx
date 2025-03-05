@@ -5,7 +5,7 @@ import EmptyData from '../Components/PersonalMacro/EmptyData';
 import MacroSummary from '../Components/PersonalMacro/MacroSummary';
 import DetailedResults from '../Components/PersonalMacro/DetailedResults';
 import MealPlanSection from '../Components/PersonalMacro/MealPlanSection';
-import MicronutrientSection from '../Components/PersonalMacro/MicronutrientSection';
+// import MicronutrientSection from '../Components/PersonalMacro/MicronutrientSection';
 import WorkoutCalendar from '../Components/PersonalMacro/WorkoutCalendar';
 import FoodRecommendations from '../Components/PersonalMacro/FoodRecommendations';
 import ResultsTimeline from '../Components/PersonalMacro/ResultsTimeline';
@@ -37,7 +37,7 @@ const PersonalMacro = () => {
         
         <MealPlanSection />
         
-        <MicronutrientSection />
+        {/* <MicronutrientSection /> */}
         
         <WorkoutCalendar />
         
