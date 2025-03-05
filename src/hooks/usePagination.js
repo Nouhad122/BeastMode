@@ -2,6 +2,9 @@ import { useMemo } from 'react';
 
 const usePagination = ({ items, itemsPerPage, currentPage, setCurrentPage }) => {
   const offset = currentPage * itemsPerPage;
+  useEffect(() =>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },[currentPage]);
 
   const currentItems = useMemo(() => 
     items?.slice(offset, offset + itemsPerPage) || [], 
@@ -15,7 +18,6 @@ const usePagination = ({ items, itemsPerPage, currentPage, setCurrentPage }) => 
 
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return {
